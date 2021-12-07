@@ -1,0 +1,1 @@
+1. **Everything be true** -- Check if the predicate is truthy. with .every()
