@@ -1,4 +1,4 @@
-function updateInventor(arr1, arr2) {
+function updateInventor(arr1, arr2) {10
     const inventory = arr1.concat(arr2).reduce(function (acc, next) {
         if (acc[next[1]]) {
             acc[next[1]] += next[0]

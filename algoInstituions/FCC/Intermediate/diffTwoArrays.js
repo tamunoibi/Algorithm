@@ -30,7 +30,7 @@ function diffArray2(arr1, arr2) {
   const newArr = arr1.concat(arr2);
 
   return newArr.filter((elem) => {
-    return !(arr1.includes(elem) && jharr2.includes(elem));
+    return !(arr1.includes(elem) && arr2.includes(elem));
   });
 }
 
