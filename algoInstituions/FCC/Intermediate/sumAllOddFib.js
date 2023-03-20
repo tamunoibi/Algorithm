@@ -1,4 +1,20 @@
-function sort(arr) {
+function sumFibs(num) {
+  let i = 1;
+  console.log(i);
+  let prevCount = 1;
+  console.log(i);
+  while (i <= num) {
+    console.log(i, i < 10);
+    i++;
+  }
+  console.log({me: 'ne----'});
+  // return num;
+}
+sumFibs(4)
+
+// sumFibs(4);
+sumFibs(1000);
+function sortComment(arr) {
   let stop = arr.length;
   // console.log(stop);
   const ans = [];
@@ -19,5 +35,5 @@ function sort(arr) {
     return ans;
   }
 }
-const ans = sort([6, 1, 2, 6]);
-console.log(ans);
+// const ans = sort([6, 1, 2, 6]);
+// console.log(ans);

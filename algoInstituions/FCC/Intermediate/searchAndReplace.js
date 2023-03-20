@@ -8,7 +8,7 @@ function myReplace(str, before, after) {
     // if we have found the word we are looking for. That is this particular word is same as the searchWord called before
     // Example
     //  str= str = ['hi' 'Ib']; before = 'Ib'; after = 'Mum';
-    // when we are on inex 2 the word = Ib and befroe = Ib
+    // when we are on index 2 the word = Ib and before = Ib
     if (word === before) {
       // Check if the first letter of a word is capital and convert the word to small letter
       // The. word[0] is the first letter if it is same as the uppercase version of the first letter . word[0].toUpperCase()

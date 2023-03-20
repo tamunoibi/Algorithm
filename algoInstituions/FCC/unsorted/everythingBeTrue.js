@@ -6,7 +6,10 @@
  */
 function truthCheck(collection, pre) {
     return collection.every(function(obj) {
-      return obj[pre];  // It is note worthy that this is a check. this either evaluates to true or false based on whether the value is a truthy value or falsy value
+      // this either evaluates to true or false based on whether the value is a truthy value or falsy value
+      // obj[pre] returns any of the falsy values( null, undefined, 0, '', NaN) then the function stops executing as it is evaluated to false
+      // Array.prototype.every method internally checks if the value returned from the callback is truthy.
+      return obj[pre]; // for example if obj is {hello: ''} and pre is hello, then obj[pre] evaluates to ''
     });
   };
   // function truthCheck(collection, pre) {
@@ -20,7 +23,7 @@ function truthCheck(collection, pre) {
   //   console.log(value);
   //   return value;
   // }
-//   Falsy valiues in js are null, undefined, 0, '', NaN;
+//   Falsy values in js are null, undefined, 0, '', NaN;
 
 truthCheck([{"user": "good"}, {'user2' : 'joy'}], 'user');
 //   truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
