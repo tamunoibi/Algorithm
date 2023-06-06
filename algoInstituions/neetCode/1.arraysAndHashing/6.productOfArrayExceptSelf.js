@@ -1,9 +1,5 @@
-/** ProductOfArrayExceptSelf 1---------------------------------------------------------------------*/
-/** O(N^2)
- * @param {number[]} nums
- * @return {number[]}
- */
 function productExceptSelfBruteForce(nums) {
+  // Time: O(N^2)
   const ans = [];
   nums.map((element, i) => {
     let product = 1;
@@ -17,7 +13,28 @@ function productExceptSelfBruteForce(nums) {
     ans.push(product);
   });
 }
-function productExceptSelfBruteForceExplanation(nums) {
+function ProductOfArrayExceptSelfLeftRightArray(nums) {
+  const leftArr = [];
+  let leftSum = 1;
+  for (let i = 0; i < nums.length; i++) {
+    leftArr.push(leftSum);
+    leftSum *= nums[i];
+  }
+
+  let rightSum = 1;
+  const rightArr = [];
+  for (let i = nums.length - 1; i >= 0; i--) {
+    rightArr.unshift(rightSum);
+    rightSum *= nums[i];
+  }
+
+  let answer = [];
+  for (let i = 0; i < nums.length; i++) {
+    answer.push(leftArr[i] * rightArr[i]);
+  }
+  return answer;
+}
+function productExceptSelfBruteForceComment(nums) {
   const ans = [];
   nums.map((element, i) => {
     let product = 1;
@@ -38,19 +55,21 @@ function productExceptSelfBruteForceExplanation(nums) {
   });
   console.log(ans);
 }
-
-/** ProductOfArrayExceptSelf 2------------------------------*/
 function ProductOfArrayExceptSelf2Pointer(nums) {
   let output = new Array(nums.length).fill(nums[0]);
   let cacheVar = nums[nums.length - 1];
+
   for (let i = 1; i < nums.length; i++) {
     output[i] = output[i - 1] * nums[i];
   }
+
   output[nums.length - 1] = output[output.length - 2];
+
   for (let j = nums.length - 2; j > 0; j--) {
     output[j] = output[j - 1] * cacheVar;
     cacheVar = cacheVar * nums[j];
   }
+  
   output[0] = cacheVar;
   return output;
 }
@@ -84,15 +103,16 @@ function ProductOfArrayExceptSelf2PointerComment(nums) {
       we can do this by having a sum variable we update each time or when we multiply the last output array item as that is the last sum
 
       let output = []; --> we create an empty array  to hold the values
-      let sum = 1; --->we create a sum variable we would update each time we 
+      let sum = 1;     --> we create a sum variable we would update each time we 
 
-      for(let i = 0; i< nums.length; i++) {
-        sum *= num[i]; ------> this is a pattern that I am very used to.
+      for(let i = 0; i < nums.length; i++) {
+        sum *= num[i];   ----> It is short for sum = sum * num[i]. Sum variables can be used to create totals over data sets. The new value is to be added to the existing total. The total starts at 1. And the first element we times it by 1. eg. [1, 2, 6, 6] becomes [1, 2, 12, 72]: 1 * 1 = 1; 2 * 1 = 2; 6 * 2 = 12; 6 * 12 = 72;
         output.push(sum) ----> this is the second step of this operation updating the output, because we want output to contain all the sums we have.
       }
-      I do not see anything wrong with this pattern But you are not a village person and should be open to exotic patterns
+      I do not see anything wrong with this pattern(using a sum variable to total). Actually it is even 
+      mor time saving because fill has O(N) time and the loop has O(N) so there is O(2N). Whereas the sum patternn only uses a single O(N). But you are not a village person that only uses local patterns and should be open to exotic patterns.
       step 1: create an output that is filled. do not be pushing the items as you go
-      step 2: multiply the previous output item with the current nums item. Since we are multiplying previous and current you should know the loop would start at 1. else  what would the previous be? 
+      step 2: multiply the previous output item with the current nums item. Since we are multiplying previous and current you should know the loop would start at 1 instead of starting at 0. else  what would the previous be? 
 
       let output = new Array(nums.length).fill(nums[0]);
       for(let i = 1; i< nums.length; i++) {
@@ -152,31 +172,8 @@ function ProductOfArrayExceptSelf2PointerComment(nums) {
 
   return output;
 }
-// const ans = ProductOfArrayExceptSelfAComment([1, 2, 3, 4]);
 
-/** ProductOfArrayExceptSelf 3---------------------------------------------------------------------*/
-function ProductOfArrayExceptSelfLeftRightArray(nums) {
-  const leftArr = [];
-  let leftSum = 1;
-  for (let i = 0; i < nums.length; i++) {
-    leftArr.push(leftSum);
-    leftSum *= nums[i];
-  }
 
-  let rightSum = 1;
-  const rightArr = [];
-  for (let i = nums.length - 1; i >= 0; i--) {
-    rightArr.unshift(rightSum);
-    rightSum *= nums[i];
-  }
-
-  let answer = [];
-  for (let i = 0; i < nums.length; i++) {
-    answer.push(leftArr[i] * rightArr[i]);
-  }
-  console.log(answer);
-  return answer;
-}
 function ProductOfArrayExceptSelfLeftRightArrayComment(nums) {
   // arr:      [ 1,  2,  3,  4,  1, 2];
   // left:     [ 1,  2,  6,  24, 24, 48 ]

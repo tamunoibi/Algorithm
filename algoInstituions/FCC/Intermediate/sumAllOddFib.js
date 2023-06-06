@@ -1,16 +1,28 @@
 function sumFibs(num) {
-  let i = 1;
-  console.log(i);
-  let prevCount = 1;
-  console.log(i);
-  while (i <= num) {
-    console.log(i, i < 10);
-    i++;
+  // Get all fibonacci numbers
+  let prev = 0;
+  let curr = 1;
+
+  let temp;
+  let sum = 0;
+
+  while (curr <= num) {
+    if (curr % 2 === 1) {
+      sum += curr;
+    }
+
+    temp = prev;
+    prev = curr;
+    curr += temp;
+
+    // An alternative way to perform the swap. This is such a neat trick..
+    // curr += prev;
+    // prev = curr - prev;
   }
-  console.log({me: 'ne----'});
-  // return num;
+  return sum;
 }
-sumFibs(4)
+
+sumFibs(5);
 
 // sumFibs(4);
 sumFibs(1000);

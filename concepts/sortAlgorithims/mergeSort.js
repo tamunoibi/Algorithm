@@ -1,4 +1,14 @@
+// Tutorial: https://www.youtube.com/watch?v=3j0SWDX4AtU
 //Time complexity O(logN) <confirm this>
+// Sample Input: mergeSort([9, 6, 5, 2, 0, 8]);
+/**
+ * The things that are required to understand this iis
+ * 1. How to divide an array into two halfs
+ * 2. How to sort by removing the first element and adding it to the new array.
+ * 3. Take the operation from having two array items to having three items. Then explain it with up to 8 items. This is because of recursion. Two operations shows how the code runs without the recursion while 3 shows with recursion. Progressively. This recursion part is complex so take it step by step don't just fly to 8 array items.
+ * 4.
+ * 5.
+ */
 function merge(left, right) {
   let sortedArr = [];
   while (left.length && right.length) {
@@ -23,7 +33,7 @@ function mergeComment(left, right) {
   let sortedArr = []; // the sorted elements will go here
 
   // this runs when their is a property in both the arrays.
-  // The two arrays passed are being modified. For each execution the first is removed from either of the left or right. the item to be removed is the smaller of the two.
+  // The two arrays passed are being modified. For each execution the first item is removed from either of the left or right. the item to be removed is the smaller of the two.
   /**Example:
    * Question:
     left  = [3, 5, 7]
@@ -32,7 +42,7 @@ function mergeComment(left, right) {
    * Solution:
     while(3 &&  1) {
       if(3 < 2) { //--->false this does not execute
-        sortedArr.push(left.shift())
+        sortedArr.push(right.shift()); //--->right.shift() would be 3. but this does not run
       }else {//---->True executes
         sortedArr.push(left.shift()); //--->left.shift() is 2 and it removes that 2 from the array
       }
@@ -76,8 +86,16 @@ function mergeComment(left, right) {
 
   return [...sortedArr, ...left, ...right];
 }
-
 function mergeSortComment(arr) {
+  /**
+   * The logic is we have two functions: one function to divide the array into two and the other to sort it
+   * Tip: Mentally when trying to remember an algorithm use an example if you use an example it is easier to visualize it.
+   * the example to visualize this is using an array with two items arr = [200, 1]
+   * 1. Divide: the first function divides it into two parts part 1: [1] part 2:[200]
+   * 2. sorter: the second function sorts the two arrays. It creates a new empty array []. Then adds the smaller of the two items. which is 1 to the new array. therfore new array becomes [1] then it merges the newArray and the leftArray (that is 200) plus the right array  [...newArray, ...left, ..,right] output [1, 2]
+   * 3. 
+   * 
+   */
   // the base case is array length <=1
   // if there is only one item in the array then return the array
   if (arr.length <= 1) {
@@ -85,8 +103,8 @@ function mergeSortComment(arr) {
   }
 
   // Math.floor rounds down to the nearest whole number
-  // It is useful for when the array has odd number of items example 9 items
-  // if you divide it into half you get 4.5 so we round it down to 4.
+  // It is useful for when the array has odd number of items
+  //  example 9 items. if you divide it into half you get 4.5 so we round it down to 4.
   const half = Math.floor(arr.length / 2);
 
   const left = arr.splice(0, half); // the first half of the array. It  the array can't be divided evenly example [1,5,2] an array of length 3. would be divided into an array  containing 1 item and an array  containing 2 items. This half has the smaller smaller half
@@ -124,13 +142,25 @@ function mergeSortComment(arr) {
    Solution:
    Story
    Ma is my grand ma,
-   ma has two children(Uncle Ina and Dianah)
+   ma has two children(Ina and Dianah)
+
+   Ina
+   has two children(Christain and Siki)
+
+   Christain
+   has one child(girl)
+
+   Siki
+   has one child(girl)
 
    Dianah
    has two children(Kesiana and Ejiro)
 
    Kesiana
    has 1 child(Azeriah)
+
+   Ejiro
+   has 1 child(Ian)
   
    Steps: [9, 6, 5, 2]
    merge(mergeSort(<left>[9, 6]), mergeSort(<right>[5, 2]))<--grand parent
@@ -196,5 +226,3 @@ function mergeSortComment(arr) {
    */
   return merge(mergeSort(left), mergeSort(right));
 }
-const ans = mergeSort([9, 6, 5, 2, 0, 8]);
-// console.log(ans);

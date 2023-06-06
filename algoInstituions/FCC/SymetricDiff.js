@@ -10,6 +10,7 @@ function sym(arrOne, arrTwo) {
       }
     });
   };
+  
   const isFound = (arr, lookup) => {
     arr.forEach((item) => {
      if (!lookup[item]) {

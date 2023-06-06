@@ -18,7 +18,10 @@ function minCostClimbingStairs(cost) {
 minCostClimbingStairs([30, 4, 20, 60, 2]);
 function minCostClimbingStairsComment(cost) {
   //We add 0 to the length of the cost. Because we are to get one step out of the array
-  // eg: [30, 4, 20, 60, 2] becomes [0, 30, 4, 20, 60, 2] we add 0 to the beginning of the array
+  // unshift() is used to add an item to the front of the array. While shift() is used to remove the first array item.
+  // I always mix it. 
+  // eg: [30, 4, 20, 60, 2].unshift(0) becomes [0, 30, 4, 20, 60, 2] we add 0 to the beginning of the array
+  // eg: [30, 4, 20, 60, 2].shift() becomes [4, 20, 60, 2] we removed 30 from the beginning of the array
   cost.unshift(0);
 
   // we are looping backwards from the end to the beginning

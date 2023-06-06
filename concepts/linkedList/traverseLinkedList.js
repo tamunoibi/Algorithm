@@ -41,7 +41,7 @@ function traverseLinkedListRecursively(head, arr = []) {
 }
 
 function traverseLinkedListRecursivelyComment(head, arr = []) {
-  // if the linked list is empty
+  // if the linked list is empty example an empty object {}
   if (head.val === undefined) {
     return arr;
   }
@@ -51,6 +51,6 @@ function traverseLinkedListRecursivelyComment(head, arr = []) {
   if (head.next) {
     traverseLinkedListRecursively(head.next, arr);
   }
-  // return the array
+  // return the array if head.next is null example {val: 2, next: null}
   return arr;
 }

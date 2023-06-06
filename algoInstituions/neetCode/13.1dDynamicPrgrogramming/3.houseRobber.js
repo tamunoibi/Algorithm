@@ -6,6 +6,7 @@
  *
  * @param {*} arr - an array of numbers
  */
+// this solution uses an array
 function rob(arr) {
   if (arr.length <= 0) {
     return 0;
@@ -22,7 +23,7 @@ function rob(arr) {
   return dp[arr.length];
 }
 
-// This is a second solution I have not taken the time to figure it out.
+// This solution uses two variables. No need maintaining an entire array since we only need two values
 function rob2(arr) {
   let [prev, curr] = [0, 0];
   for (const house of arr) {
@@ -32,6 +33,9 @@ function rob2(arr) {
   }
   return curr;
 }
+
+
+
 function robComment(arr) {
   /** If the house array is empty then return 0. Since there is 0 amount you can make from an empty street.
    *  Don't run my code and ruin it
@@ -154,7 +158,7 @@ function robComment(arr) {
   /**
    * Dynamic programming questions have the same patterns
    * 1. You create an array (as a convention it is called). The array is is length of n+1. Example n is 5. You create 6 dpArray items. Since the array you are creating is 0 based.
-   * 2. You set the first initial 2 values of the array. the first value is index 0. It is usually set to 0(there is 0 ways to rob one house). Then you set index 1(there is one way to rob one house). Which is usually set to one
+   * 2. You set the first initial 2 values of the array. the first value is index 0. It is  set to 0(there is 0 ways to rob 0 house). Then you set index 1(there is one way to rob one house). Which is usually set to one
    * 3. We start the loop at index 1 and keeping looping as long as i < arr.length. The point is if the array is 5. you would loop 5 times. So as to go through all the items of the array. for(let i =1; i<= arr.length; i++)
    *
    */

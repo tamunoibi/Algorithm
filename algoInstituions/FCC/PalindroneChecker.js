@@ -1,6 +1,28 @@
+// Sample input: palindromeSecond("racecar");
 function palindrome(str) {
+  const regEx = /[\W_]/g;
+  const newStr = str.toLowerCase().replace(regEx, "");
+
+  const half = Math.round(newStr.length / 2);
+  for (let i = 0; i < half; i++) {
+    const rightItem = newStr[i];
+    const leftItem = newStr[newStr.length - (i + 1)];
+
+    if (leftItem !== rightItem) {
+      return false;
+    }
+  }
+  return true;
+}
+function palindromeSecondComment(str) {
+  const regEx = /[\W_]/g;
+  const newStr = str.toLowerCase().replace(regEx, "");
+  const reverseStr = newStr.split("").reverse().join("");
+  return reverseStr === newStr;
+}
+function palindromeComment(str) {
   //Using two pointers. one at the front and one at the back
-  // the approach is that we compare the very first and  the very last item if they are the same
+  // the approach is that we compare the very first and  the very last item if they are the same.
   const regEx = /[\W_]/g;
   // remove all non alphabets
   const newStr = str.toLowerCase().replace(regEx, "");
@@ -19,10 +41,10 @@ function palindrome(str) {
   return true;
 }
 
-function palindromeSecond(str) {
+function palindromeSecondComment(str) {
   // the approach is that if you reverse a string and  compare that string with the reversed
   // example1:  'racecar' reversed is racecar which means it is a palindrone
-  // example2: 'joy; reversed is 'yoj' which means it is not a palindrone 
+  // example2: 'joy; reversed is 'yoj' which means it is not a palindrone
   //
 
   // remove all non alphabets
@@ -33,5 +55,3 @@ function palindromeSecond(str) {
   // compare if the reversed string is the same as the initial string
   return reverseStr === newStr;
 }
-const ans = palindromeSecond("racecar");
-console.log({ ans });

@@ -48,7 +48,7 @@ We return the accumulator. Which is an object
 forEach returns a new modified array. It mutates the original array but returns undefined(I wonder why they did not make it such that it returns the modified array? like?).
 
 We loop through the array. For each array item we 
-a.  create a new property called orbitalPeriod. If a property doesn't already exist in an objec t and we do an assignment like we did it creates the property on the fly. obj.orbitalPeriod = orbPeriod; 
+a.  create a new property called orbitalPeriod. If a property doesn't already exist in an object and we do an assignment like we did it creates the property on the fly. obj.orbitalPeriod = orbPeriod; 
 b.  delete the property avgAlt, delete obj.avgAlt; If you want to delete an objects property you use the `delete` keyword. 
 
 ### key Features

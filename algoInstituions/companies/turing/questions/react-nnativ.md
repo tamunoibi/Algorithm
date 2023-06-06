@@ -1,5 +1,5 @@
-1.Which of the tfollowing is an INCORRECI statement about Animations In React Native?
-Ans: 
+1.Which of the following is an INCORRECI statement about Animations In React Native?
+Ans: B
 The Animated API exports five animatable
 component types: View, Image, ScrollView, FlatList and SectionList.
 
@@ -16,16 +16,7 @@ Ans: None of the above.
 
 6. Which of the following is a CORRECT way to add bold or italics to single words in the <Text> field? 
 (Select all that apply.)
-Ans:
-a.
-«text>
-«Text>This is a sentence</Text>
-«Text style={{fontweight:"bold"}}>with</Text>
-«Text> one word in bold</Text>
-</Text>
-c.
-«Text style={{fontweight: "580"}}>blablas/Text>
-
+Ans: a, d
 
 7. Which of the following are CORRECT statements about TextInput?
 {check}
@@ -39,7 +30,7 @@ Ans: keyboardHidesTabBar
 
 10. Which approach is recommended for accessing state after updating it with
 {check}
-Ans: 
+Ans: A, C
 
 11. What are the correct parameters and order or parameters or the getDerivedStateFromProps() method?
 Ans: None of the above.
@@ -55,18 +46,21 @@ Ans: onRefresh
 
 15. Which of the following statements are CORRECT?
 {check}
+relates to hoc
+Ans: a, b
 
 16.What are the correct parameters and order of parameters of the shouldComponentUpdate() method?
 Ans: None of the above.
 
 17. Which of the following values can be used for alignltems?
 {check}
+Ans: b, e
 
 18. When a component updates, the DOM is updated after which of the following methods?
 Ans: getSnapshotBeforeUpdate()
 19. Which of the following inserts a line break into a <Text> component in React Native?
 {check}
-Ans: 
+Ans: B, C
 20. Which function is used to set the value of props?
 (Select all that apply.)
 Ans: None or the Above.
@@ -75,7 +69,7 @@ Ans: None or the Above.
 Ans: function
 22. Which of the following is used to specify the request method in fetch?
 {check}
-Ans: 
+Ans: A
 23. Which OS supports the enabled prop RefreshControl?
 Ans: Android
 
@@ -88,7 +82,7 @@ Ans: The Purpose of SwitchNavigator Show One Screen at a Tima
 26. Which of the following are CORRECT statements about props of ScrollView?
 (Select all that apply.)
 {check}
-Ans: 
+Ans: E
 27. Which of the following is a method of SwitchActions?
 (Select all that apply.)
 Ans: navigate && back
@@ -108,7 +102,7 @@ Ans: navIgate
 Ans: getParams
 33. Which of the following statements are CORRECT about the props of Switch?
 {check}
-Ans: 
+Ans: A, C
 34. Which of the following makes accessing props faster?
 Ans: const { count } = this.props
 35.   NOT FOUND
@@ -121,10 +115,10 @@ Ans: navigate
 Ans: 
 39. Which of the following methods can be used to get data passed from the previous screen?
 {check}
-Ans: 
+Ans: A, B
 40. What props do not work with the prop secure TextEntry of Textinput?
 {check}
-Ans: 
+Ans: A, C, D
 41. Which of the following is NOT a key of the StackNavigatorConfig object?
 Ans: initialRouteKey
 
