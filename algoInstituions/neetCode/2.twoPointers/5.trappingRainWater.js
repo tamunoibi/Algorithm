@@ -1,19 +1,39 @@
 // Time O(N ^ 2)
 function trapBruteForce(height) {
   /**
-   * Some notes: yiy
+   * Some notes:
    * 1. If you hae only one element you can not store any water. Example height = [ 9]
    * 2. if you have two elements you can not store any water.
-   *        Example height = [10, 20]      -> the first element is less than the second
-   *        Example height = [10, 10]      -> the first element is equal to the second
-   *        Example height = [20, 10]      -> the first element is greater than the second
+   *        Example height = [1, 3]      -> the first element is less than the second
+   *        Example height = [4, 1]      -> the first element is equal to the second
+   *        Example height = [3, 3]      -> the first element is greater than the second
+   *
+   *
+   *         __3___        the first element is less than the second. It would spill on the left
+   *         ||  ||
+   *  __1___ ||  ||
+   *  ||  || ||  ||
+   *
+   *
+   *  __4___
+   *  ||  ||               the first element is greater than the second.  It would spill on the right
+   *  ||  ||
+   *  ||  || __1___
+   *  ||  || ||  ||
+   *         2 water
+   *
+   *
+   *   __3__ __3___         the first element is equal to the second. it would not have any place
+   *  ||  || ||  ||
+   *  ||  || ||  ||
+   *  ||  || ||  ||
    *
    *
    * In order to trap water we must form a POCKET or a HOLD.
    * That is like a hole. The item in the middle must be less than the items on the right and left
    *
    *  __4___
-   *  ||  ||        __3___         _the maximum water is the minimum of the left and right - the current item___
+   *  ||  ||        __3___         The water contained in the pocket is the minimum of the left and right - the current item
    *  ||  ||        ||  ||
    *  ||  || __1___ ||  ||         waterLevel  =  Math.min(4, 3) - 1 = 2
    *  ||  || ||  || ||  ||
@@ -22,7 +42,7 @@ function trapBruteForce(height) {
    *dhbchfdgifGSd dgciygsdfv d
    */
   let sum = 0;
-  // the first and the last blocks can not store waterfgcddsmndxvbycdg
+  // the first and the last blocks can not store water. Since it would spill out
   // we start the loop at the second block.
   for (let i = 1; i < height.length; i++) {
     // the formular for getting the water stored
@@ -63,6 +83,30 @@ function trapBruteForce(height) {
   return sum;
 }
 
+function trapTwoPointer(height) {
+  if (!height) {
+    return 0;
+  }
+  let left = 0;
+  let right = height.length - 1;
+  let leftMax = height[left];
+  let rightMax = height[right];
+  let res = 0;
+  
+  while (left < right) {
+    if (leftMax < rightMax) {
+      left++;
+      leftMax = Math.max(leftMax, height[left]);
+      res += leftMax - height[left];
+    } else {
+      right--;
+      rightMax = Math.max(rightMax, height[right]);
+      res += rightMax - height[right];
+    }
+  } 
+  return res;
+}
+
 // Time O(N) takes extra space
 function trapTwoArrays(height) {
   const leftMaxArr = [];
@@ -98,8 +142,9 @@ function trapTwoArrays(height) {
 }
 
 trapTwoArrays([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]);
+
 // Time O(N) does NOT take extra space
-function trapTwoPointer(height) {
+function trapTwoPointerComment(height) {
   if (!height) {
     return 0;
   }

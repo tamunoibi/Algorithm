@@ -1,3 +1,83 @@
+Be more invested in mummy's business create a catalogue for her.
+The things she sells (snail, crayfish, plantain, potatoe, dry fish, palm oil, ogbonnno, )
+Right now is a perfect time to bring in plantain and sell.
+Offer free delivery or delivery at 200 naira on a particular day example 200naira delivery 
+
+
+Things that make me bloated 
+1. red meat
+2. Garri
+3. rice
+4. cow milk
+5. white sugar in its various forms
+      - cake, fanta, sprite, alchohol 
+      - chi exotic
+      - cake, meat pie, small chops
+      - pizza, shawarma, burger, 
+      - bread, biscuit(maryland biscuit)
+      - chocolate
+      - pancake
+6. Fried oil
+   - fried plantain
+   - fried yam
+   - fried potatoe
+   - chin chin
+
+
+The girl is just blessed. Young girl way God just love, bless with talent. 
+She just dey on soft they eating money. 
+
+The next year of my life is the best year of my life. God has heard all my prayers and has blessed me beyond my wildest imaginations. 
+
+The one that is loved and favoured, blessed and lucky one. 
+
+The one that is highly favoured. The beloved of the most high. The one that is loved. The lucky one. Person wat just dey blessed with talent and skill. This content creationn na wetin God just give her to take pass for the road she is very skilled and talented. 
+
+
+Where your attenntionn goes your life force goes. 
+If you want to be hot, sexy all your attention must be focused on that.
+If you want to be working at a great company, sharing your work online making millions your attention must be focused on that. 
+
+
+
+Video Editing
+1. Speak with Plantain womans som
+2. Get Brights Laptop for Nma
+3. Speak with Bibi Guy 
+4. things that I would not do(Speak with Bibi guy, Speak with sycamore guy, )
+
+
+Job Application
+1. Main gate place
+2. Nma
+
+
+To master your life control your attention if you want to master your life you have to master your mind, and to master your mind you have to master your attention. Where your attention goes your life goes. Instead of looking at the things that you do not like in your life focus your attention onn where you want to go and where you would rather be 
+
+
+You did not loose motivation you just forgot why you started in the first place.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 exercise
 bath
 Abdul task

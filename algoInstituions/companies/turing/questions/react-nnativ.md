@@ -75,11 +75,12 @@ Ans: Android
 
 24. Which of the following triggers an update (re-render) to the Ul?
 (Select all that apply.)
-{no answer}
+{not sure} - C Set state
 Ans: 
 25. Which of the followina are CORRECT statements about SwitchNavigator?
 Ans: The Purpose of SwitchNavigator Show One Screen at a Tima
-26. Which of the following are CORRECT statements about props of ScrollView?
+26. Which of the following are CORRECT statements about props of 
+iew?
 (Select all that apply.)
 {check}
 Ans: E

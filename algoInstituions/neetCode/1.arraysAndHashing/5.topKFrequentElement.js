@@ -36,9 +36,9 @@ function topKFrequentComment(nums, k) {
   /**The logic:
    * We solve the problem in 3 steps:
    * 1.  We convert the array to a frequency table. A Frequency table where we map each key to the number of times it appears. That is {key: frequency}. eg {1: 3} means 1 appears 3 times
-   * 2.  We convert the frequency table to bucket arranged in the order they appear. The bucket is an array of arrays [[], []]. Think of each bucket as being labeled with their index. 
+   * 2.  We convert the frequency table to bucket arranged in the order they appear. The bucket is an array of arrays [[], []]. Think of each bucket as being labeled with their index.
    *     Bucket at index 5 contains all elements with a frequency of 5. So that at the end of the day the last bucket is the element that appears the most
-   * 3.  We convert the bucket(array of arrays) to a single array. We start this conversion from the back so that the array is sorted in descending order. From the most frequently occuring item to the least occurinng item. 
+   * 3.  We convert the bucket(array of arrays) to a single array. We start this conversion from the back so that the array is sorted in descending order. From the most frequently occuring item to the least occurinng item.
    */
 
   /**
@@ -89,11 +89,11 @@ function topKFrequentComment(nums, k) {
    *
    * example 2:
    * nums = ['eye','nose','eye',]
-   *
-   * bucket = [[],['nose'],['eye'],[1, 2],[],[]]
+   * lookup = {eye: 2, nose: 1}
+   * bucket = [[],['nose'],['eye'];
    */
 
-  // The buckets represents the frequency of occurence. We populate each bucket with their respective count
+  // The buckets represents the frequency of occurrence. We populate each bucket with their respective count
   for (const key in lookup) {
     const count = lookup[key];
     bucket[count].push(key);

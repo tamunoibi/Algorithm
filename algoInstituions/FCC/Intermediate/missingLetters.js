@@ -18,7 +18,7 @@ function fearNotLetter(str) {
   // What is the logic of the solution?
   // For consecutive letter like abc their ASCII code is also consecutive.
   // a=97; b=98; and so on..
-  // so we would check if the each letters ASCII code is consecutive. If it is not we would return that
+  // so we would check if each letters ASCII code is consecutive. If it is not we would return that
 
   // we get the ASCI code of the first character. if str = 'abce';  character 0 is 'a' and the ASCII code for 'a' is 97
   const start = str.charCodeAt(0);

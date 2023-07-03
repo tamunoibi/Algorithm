@@ -49,7 +49,7 @@ function canPartitionMemoization(nums) {
           memo[index] =  itPartitions(nums, index + 1, sum, total) || itPartitions(nums, index + 1, sum + nums[index], total);
         return memo[index]
    }
-  let total = 0;
+    let total = 0;
     let total = nums.reduce((acc, val) => acc+=val);
     return itPartitions(nums, 0, 0, total);
 };

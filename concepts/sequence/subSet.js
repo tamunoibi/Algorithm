@@ -1,6 +1,5 @@
 
 // not functional
-
 function subSet(arr) {
   const subArr = [];
   for (let index = 0; index < arr.length; index++) {
@@ -11,3 +10,4 @@ function subSet(arr) {
   return subArr;
 }
 subSet([1,2,3,4]);
+

@@ -13,11 +13,18 @@ function factorialize(num) {
 
 //Using Recursion
 function factorializeRecursive(num) {
-  if(num <= 1) {
+  if (num <= 1) {
     return 1;
   }
+  /**
+   * factorializeRecursive(5);
+   *  num + factorializeRecursive(num - 1)
+   *  1 + 1  = 2
+   *  2 + 2  = 4
+   *  3 + 4  = 7
+   *  4 + 7  = 11
+   *  5 + 11 = 16
+   */
   return num * factorializeRecursive(num - 1);
 }
-
 // factorialize(5);
-console.log(factorializeRecursive(5));

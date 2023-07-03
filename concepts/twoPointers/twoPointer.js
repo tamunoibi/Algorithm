@@ -46,3 +46,51 @@ function twoPointersComment(arr) {
     //   }
     }
 }
+
+
+// https://towardsdatascience.com/two-pointer-approach-python-code-f3986b602640#:~:text=Two%20pointer%20algorithm%20is%20one,approach%20works%20in%20constant%20space.
+// Reverse an array in place
+function a() {
+  function reverseArray(array) {
+    let start = 0;
+    let end = array.length - 1;
+    while (start < end) {
+      // an alternative way to perform the swap
+      // let temp = array[start];
+      // array[start] = array[end];
+      // array[end] = temp;
+      array[start], (array[end] = array[end]), array[start];
+      start++;
+      end--;
+    }
+  }
+  let array = [10, 20, 30, 40, 50];
+  // reverseArray(array);
+  // console.log(array); // [ 10, 20, 30, 40, 50 ]
+}
+
+function b() {
+    // Not tested
+  function sortedSquares(nums) {
+    let len = nums.length;
+    let start = 0;
+    let end = len - 1;
+    let res = [0] * len;
+    let idx = len - 1;
+    while (end > -1 && idx > -1) {
+      if (Math.abs(nums[start]) > Math.abs(nums[end])) {
+         res[idx] = nums[start] * nums[start];
+         start += 1;
+      } else {
+        res[idx] = nums[end] * nums[end];
+        end--;
+      }
+      idx--;
+    }
+    return res;
+  }
+  let nums = [10, 20, 30, 40, 50];
+  sortedSquares(nums);
+  console.log(nums); // [ 10, 20, 30, 40, 50 ]
+}
+

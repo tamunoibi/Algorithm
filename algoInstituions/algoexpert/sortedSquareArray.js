@@ -1,16 +1,23 @@
 /**
  * reference note Jan, 2022: book1 page 16
- * 
+ *
  * Sample input:  sortedSquareArraysComment([-10, 1, 2, 3, 4, 5])
-*/
+ */
 
 function sortedSquareArrays(nums) {
+  /**  an alternative way of creating an array filled with zeros
+   const result = [];
+   for (let index = 0; index < nums.length; index++) {
+     result.push(0);
+   }
+
+
+   But this syntax 
   const result = new Array(nums.length).fill(0);
-  // an alternative way of creating an array filled with zeros
-  //  const result = [];
-  //  for (let index = 0; index < nums.length; index++) {
-  //    result.push(0);
-  //  }
+  is shorter and easier to read
+
+ */
+  const result = new Array(nums.length).fill(0);
   let left = 0;
   let right = nums.length - 1;
   let j = nums.length - 1;
@@ -34,7 +41,7 @@ sortedSquareArrays([1, 2, 3, 4, 5]);
 function sortedSquareArraysComment(nums) {
   const result = new Array(nums.length).fill(0);
   /**
-   * We use two pointers one at the beginning of the array
+   * We use two pointers one pointer at the beginning of the array
    * and the other at the end of the array.
    * We square both values and the BIGGER of the two is added to the ending in the new array.
    *
@@ -48,11 +55,12 @@ function sortedSquareArraysComment(nums) {
 
   // we do not want the left and the right values to cross.
   // For example if left starts at 0. right starts at 4.
-  // If we  left becomes: 0, 1, 2, 3, 4.
-  // Then left must stop at 4. The left and right must stop at the same point. 
+  // array = [0, 1, 2, 3, 4]
+  // If we increase left, left becomes: 0, 1, 2, 3, 4.
+  // Then left must stop at 4. The left and right must stop at the same point.
   while (left <= right) {
-    let leftVal = Math.pow(nums[left], 2);
-    let rightVal = Math.pow(nums[right], 2);
+    const leftVal = Math.pow(nums[left], 2);
+    const rightVal = Math.pow(nums[right], 2);
 
     // The bigger of the values should be added to the end of the array.
     if (rightVal > leftVal) {

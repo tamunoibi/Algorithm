@@ -2,8 +2,6 @@ const binaryTree = {
   val: 3,
   left: {
     val: 9,
-    // left: null,
-    // right: null,
     left: {
       val: 2,
       left: null,
@@ -73,9 +71,10 @@ function maxDepthQueueBfs(root) {
     return level;
   }
   const queue = [root];
-  while (queue.length > 0) {
+  while (queue.length) {
     for (let index = 0; index < queue.length; index++) {
       const curr = queue.shift();
+      // [3, 4, 6]  [4, 6]
       if (curr.left) {
         queue.push(curr.left);
       }

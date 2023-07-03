@@ -33,10 +33,10 @@ const curInv = [
 * const inventory = arr1.concat(arr2);
 
 .concat() joins two array into one.
-array1 = [[21, 'Bowling Ball'], [2, 'Dirty Sock']];
-array2 = [[67, 'Bowling Ball']];
+array1 = [['a', 'b'], [2, 'e']];
+array2 = [['f', 'g']];
 console.log(array1.concat(array2)); 
--->[ [ 21, 'Bowling Ball' ], [ 2, 'Dirty Sock' ], [ 67, 'Bowling Ball' ] ]
+output: [[ 'a', 'b' ], [ 2, 'e' ], [ 'f', 'g' ]]
 
 * .reduce(function(acc, next){}, {});
 next: 

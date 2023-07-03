@@ -55,7 +55,7 @@ function reverseLinkedListIteratively(head) {
   }
   return prevTemp;
 }
-function reverseLinkedListRecursively(head) {
+function reverseLinkedListRecursivelyOne(head) {
   if (head === null) {
     return null;
   }
@@ -164,7 +164,7 @@ function reverseLinkedListIterativelyComment(head) {
   }
   return prevTemp;
 }
-function reverseLinkedListRecursivelyComment(head) {
+function reverseLinkedListRecursivelyOneComment(head) {
   /**
    * This reverse() method returns a node.
    * Our goal is to go all the way to the end
