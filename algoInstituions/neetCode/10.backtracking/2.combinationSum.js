@@ -55,15 +55,17 @@ function combinationSumComment(candidates, target) {
    * 
    * Example
       target: 5
-              ^    total = 1         1   
-              |                     /   \
-              |    total = 2        1   
-MAXIMUM HEIGHT|                     /   \  
-     5        |    total = 3        1        
-              |                     /   \      
-              |    total = 4       2 
-              |                    /   \
-              |     total = 5      1     <--- we return when sum is target
+              ^    curr  = [1];          total = 1;                 1   
+              |                                                    /   \
+              |    curr  = [1, 1];       total = 2;               1   
+MAXIMUM HEIGHT|                                                  /   \  
+     5        |    curr  = [1, 1, 1];    total = 3;             1        
+              |                                                /   \      
+              |    curr  = [1, 1, 1, 1];    total = 4;        1 
+              |                                              /   \
+              |    curr  = [1, 1, 1, 1, 1]; total = 5;      1           <--- we return when sum is target
+              |    total = 5 so we stop
+                    
                       
    */
   const dfs = (i, current, total) => {

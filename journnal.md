@@ -1,12 +1,63 @@
-MTn
+Bvn:		22193591189
+Full name:  APREKUMA TAMUNOIBI
+Gender:     Female
+Marital status: Single
+Date of birth: 31/05/1993
+Nationality: Nigerian
+State of origin: Bayelsa
+Residential Address: FLAT 4, ROAD E, RIVERS STATE UNIVERSITY
+Nearest bus stop: Mile 3
+City/Town:  Port Harcourt
+State of residence: Rivers
+Occupation: Software Engineer
+Phone number: 08136532017
+Active email address: taprekuma@yahoo.co.uk
+
+
+MTN
 1.Data Plans 312 
-2.Recharge 311 
-3.Borrow Airtime 303 
 4.Data Bal 323 
 5.Acct Bal 310 
-6.Share Data 321 
-7.VAS 305 
-8.NIN 996
+
+
+T
+1. Use a sharp razor to groom the brows
+2. Wipe your face with wipes
+3. Prep your brows
+4. Draw your brows
+
+HOW TO PREP YOUR BROWS
+1. Use beauty blender to apply foundation on the brows. This help to get a flawless look
+2. Use beauty blender or setting brush to apply setting powder on your brows. Thi drys the foundation.
+3. Use a spooly to brush the brows up
+
+HOW TO DRAW BROWS
+a. The bottom
+- You start with a slanted Line at the bottom
+You would connect the top to the bottom of this slanted line.
+b. The top
+ - You take a straight line when
+ - When at the arch you take a mild curve and connect it to the tail. Note do not just do a sharp v. See picture for illustration
+c. Fill it in
+   starting at the inner side (the side of your bows closest to your eyes) draw hairlike strokes the bottom then draw hairlike strokes at the top then use your spooly to blend them in. 
+ Tips
+ - Draw slowly. 
+ - Ensure your pencil is sharp
+ - Use a had mirror so you can see
+ 
+ CONCEALING
+ Conceal the brows at the tail axis. Use a lighter shade so that it looks highlighted. Then use a darker shade for the begininng. When you take the concealer reduce it. Do not apply excess concealer you can also reduce it by applying it on your eyelids.
+ Use a damn beauty blender to blend the concealr
+  Tips
+ - Use the body of the concealer brush to apply it and not the tip
+
+ Things that I enjoy
+1. Taking a hot bath annd later massaging with palm kernneel oil
+2. Going swimming
+3. Going dancing
+4. Drinking hot coffee while playing meditative sounds with early morning music while working
+5. Watching a really nice movie
+6. Gym clothes
 
 Journal 23/April 2023
 Things I want improved
@@ -119,8 +170,8 @@ I wish to create content about lifestyle
 Action step
 1. Schedule the content when you would start
 2. Create a script
-3.
-4.
+3. Getting an accountability partner from tiktok
+4. Working on it first thing in the morning.The night before plan a.dress b.what you would say. You could write out the tutorial on paper.
 5.
 3. 
 
