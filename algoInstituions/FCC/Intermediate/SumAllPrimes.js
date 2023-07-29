@@ -1,7 +1,7 @@
 function isPrime(theNum) {
   // stop at a number before the number we are trying to check if it is a prime
   for (let innerNum = 2; innerNum < Math.sqrt(theNum); innerNum++) {
-    //if we get a successful division we know it is definitely not a prime
+    // if we get a successful division we know it is definitely not a prime
     // that is we are checking if theNum % innerNum === 0
     // console.log({ theNum, ans: theNum % innerNum === 0 });
     if (theNum % innerNum === 0) return false;

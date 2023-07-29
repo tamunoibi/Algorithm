@@ -2,10 +2,6 @@
  * Question: houseRobbber: https://leetcode.com/problems/house-robber/
  *
  */
-/**
- *
- * @param {*} arr - an array of numbers
- */
 // this solution uses an array
 function rob(arr) {
   if (arr.length <= 0) {
@@ -157,8 +153,8 @@ function robComment(arr) {
    */
   /**
    * Dynamic programming questions have the same patterns
-   * 1. You create an array (as a convention it is called). The array is is length of n+1. Example n is 5. You create 6 dpArray items. Since the array you are creating is 0 based.
-   * 2. You set the first initial 2 values of the array. the first value is index 0. It is  set to 0(there is 0 ways to rob 0 house). Then you set index 1(there is one way to rob one house). Which is usually set to one
+   * 1. You create an array (as a convention it is called dp). The array is length of n+1. Example n is 5. You create 6 dpArray items. Since the array you are creating should start from index 0 to index 6(inclusive of index 6).
+   * 2. You set the first initial 2 values of the array. The first value is index 0. It is  set to 0(there is 0 ways to rob 0 houses). Then you set index 1(there is one way to rob one house). Which is usually set to one
    * 3. We start the loop at index 1 and keeping looping as long as i < arr.length. The point is if the array is 5. you would loop 5 times. So as to go through all the items of the array. for(let i =1; i<= arr.length; i++)
    *
    */

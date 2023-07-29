@@ -8,10 +8,10 @@
  *
  * Explanation:
  * The solution set must not contain duplicate subsets.
- * [1,3] and [3, 1] contain the same elements the other is just swapped so it is considered duplicate subsets
- *
+ * [1,3] and [3, 1] contain the same elements the order is just swapped so it is considered duplicate subsets
+ *     [1,2,3]
+ *      0 1 2
  */
-
 function subsets(nums) {
   const res = [];
   const subset = [];
@@ -43,23 +43,42 @@ function subsets(nums) {
    * The time complexity in the worst case of input is that we have a 1
    *  example nums = [1,2,3]
    *  When dealing with double recursion it is always two to the power of something
-   *  2 ^ . Since for each operation we are doing two. Understanding why has not happened.
-   *  But I have done several of this kind of operations that now know it. 
-   *  
+   *  2 ^ . That is Squared. 
+   *  Since for each operation we are doing two recursive calls. annd 
+   *  if the array length is 3. we would do 2 * 2 * 2
+   *  First we do 2 calls. 
+   *  Next  we do 4 calls. Because for each of those 2 calls we do 2 additional calls. call 1 (two calls) call 2 (two calls)
+   *  Next  we do 8 calls. Because for each of those 4 calls we do 
    * 
-   *  The question is to the power of what? 2^? 
-   *  The answer is what is thhe maximum height of the tree?
-   *  in this case the maximum 
+   *  2^N that is 2SquaredN(Question what is this called?) should NOT be confused with:
+   *  N^N that is Nsquared =  3 * 3 = 9;
    * 
-     * Example
-      target: 5
-  arr.length: 3
-              ^  subset = [1]            1   
-              |                         /   \
-              |  subset = [1, 2]       2   
-MAXIMUM HEIGHT|                       /   \  
-     3        |  subset = [1, 2, 3]  3      1        
-              |                     /       <--- we return when n has gone through all the items
+   * 
+   * Explanation
+   * If your great grand mother has 2 kids. One of them is your grandmother
+   * Those 2kids have two kids. One of them is your mother.
+   * Those 2kids have two kids. One of them is you.
+   * How many great grandkids does your great grand ma have
+   * tree height:4
+                 ^  Great GrandMa       greatGrandMa   
+                 |                         /        \
+                 |  GrandMa             grandMa  
+   MAXIMUM HEIGHT|                       /    \  
+        3        |  Mum                mum    aunt  
+                 |                     / \     / \   
+   *                Me               me  sis   X  X <--- my grandma has a total of 8 great grand kids. 4 great grand kids from my grandma and 4 great grand kids from my grand ma's sibling
+   *
+   *
+   *
+   * Example 2:
+   * target: 5
+     arr.length: 3
+                 ^  subset = [1]            1   
+                 |                         /   \
+                 |  subset = [1, 2]       2   
+   MAXIMUM HEIGHT|                       /   \  
+        3        |  subset = [1, 2, 3]  3      1        
+                 |                     /       <--- we return when n has gone through all the items
                       
    */
 

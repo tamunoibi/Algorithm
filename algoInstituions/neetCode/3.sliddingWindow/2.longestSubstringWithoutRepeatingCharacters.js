@@ -32,12 +32,12 @@ function maxUniqueNumbersComment(string) {
                                |right = 7
         since we have a single repeated character then we remove the leftmost character. 
         This didn't make any sense to me. and rightly so as it is rubbish
-                  change lookup from [a b c d e f g g ]
-                                  to [b c d e f g g ]
+        That means I felt we would change lookup from {a b c d e f g g}
+                                  to {b c d e f g g}
               
 
         The way it actually runs                     
-        we keep removing the leftmost character until we don't have any occurence of that repeacted charcter
+        we keep removing the leftmost character until we don't have any occurrence of that repeated character
                     change lookup from [a b c d e f g g ]
                                     to [b c d e f g]
                                     to [c d e f g]
@@ -51,10 +51,10 @@ function maxUniqueNumbersComment(string) {
        
        Ans:
       we are trying to make sure that current chacrater is not 
-       repeated already in the lookup. We keep deleting the last character in
+      already in the lookup. We keep deleting the last character in
        the lookup and moving the left pointer forward
        example 1: abcdefgggg
-         iteration 8:
+         iteration 8: that is right is at 7. that is the g in bracket abcdefg[g]gg
           while loop 1:
                         |left = 0
                         |
@@ -64,7 +64,7 @@ function maxUniqueNumbersComment(string) {
          right = 7
          left = 0
          lookup = [a b c d e f g]
-         the check is if g found in the lookup? return true
+         the check is if g found in the lookup? returns true
          so we delete a from the lookup and increase left to 1
 
           while loop 2:
@@ -183,12 +183,28 @@ function maxUniqueNumbersComment(string) {
       left++;
     }
     characterSet.add(string[right]);
-    // right - left + 1 at this point it feels like we are just making up calculations as we go
-    // I now understand it:
-    // We are calculating the length of the unique characters , that is the length of the window
-    // that is how many items are in the lookup (which is the same number of items in window)
-    // left is at the start of the unique charaters while right is at the end of the unique characters
-    /** Example 1:
+    /**  HOW TO GET THE WINDOW LENGTH
+     * 
+     * FORMULA
+     * windowLength = right - left + 1
+     * 
+     * Different ways to write the formula
+     *  right - left + 1
+     *  right + 1 - left
+     * 
+     * The formula could be written in different ways.
+     * as long as we are subtracting right - left. 
+     * and adding 1 (account for the fact that we were dealing with zero based index and now we want to convert it to One based lengths)
+     * 
+     * 
+     *  A the first point of seeing this right - left + 1 it felt like we were just making up calculations as we go.
+     *  But now I understand why and you too can 
+
+     * EXPLANATION:
+     * We are calculating the length of the unique characters , that is the length of the window
+     * that is how many items are in the lookup (which is the same number of items in window)
+     * left is at the start of the unique charaters while right is at the end of the unique characters 
+     * Example 1:
      *  length of window
      * 
      *  right + 1 - left
@@ -197,24 +213,24 @@ function maxUniqueNumbersComment(string) {
      * so it is the range of 0 to 0. including 0
      * If you count it you can see that there is one item. But if you subtract it
      * it would give you zero items. since the range of 0 to 0 has no items
-                        |left = 0
-                        |
-                        a b c d e f g g g
-                        ^
-                        |right = 0
-                                   
-* Example 2:
+     *                   |left = 0
+     *                   |
+     *                   a b c d e f g g g
+     *                   ^
+     *                   |right = 0
+     *                   Ans: 1 (There is 1 character in the window. 0 - 0 + 1 = 1)
+     *                              
+     * Example 2:
      *  length of window
      *  right + 1 - left
      *    6  +  1 -  0   = 7
      * Note we add 1 because the calculation is inclusive
-     * so it is the range of 0 to 6 including 0                 |left = 0
-                        |
-                        a b c d e f g g g
-                                    ^
-                                    |right = 6
-                                    
-  
+     * so it is the range of 0 to 6 including 6.                 |left = 0
+     *                   |left = 0
+     *                    a b c d e f g g g
+     *                                ^
+     *                                |right = 6
+     *                   Ans: 5 (There are 5 characters in the window. 6 - 0 + 1 = 5)
     */
     maxUniqueNumbers = Math.max(right - left + 1, maxUniqueNumbers);
   }

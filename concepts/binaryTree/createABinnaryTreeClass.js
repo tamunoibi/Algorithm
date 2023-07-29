@@ -5,7 +5,7 @@
 the part that gets confusing is that left can also have properties(val, left and right). And right can also have properties(val, left and right).
 
 Each note has at most 2 children
- * Example this tree node a has two children That each have nested children. this is valid.
+ * Example this tree node a has two children b and c. B has two children while c has one child
       a
     /   \
    b      c
@@ -87,11 +87,11 @@ const binaryTree = {
  *       a. val   --> assign it to the value being passed 
  *       b. left  -->  assign it to null it would later be joined properly to its proper ansestry
  *       d. right -->  assign it to null it would later be joined properly to its proper ansestry
- * 2. creeate a node passing in the value
+ * 2. create a node passing in the value
  * 3. Join the node together by assigning the left and right properties.
  */
 /**
- * Example to create a tree with the structre below
+ * Example to create a tree with the structure below
       a
     /   \
    b      c
@@ -111,7 +111,7 @@ class Node {
 }
 
 
-// 2.  creeate a node passing in the value
+// 2.  create a node passing in the value
 const a = new Node('a');
 const b = new Node('b');
 const c = new Node('c');

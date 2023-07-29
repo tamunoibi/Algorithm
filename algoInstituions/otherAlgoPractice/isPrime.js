@@ -1,11 +1,23 @@
 function isPrime(num) {
+  const s = Math.sqrt(num);
+  for (var i = 2; i <= s; i++) {
+    if (num % i === 0) return false;
+  }
+  return num > 1;
+}
+console.log(isPrimeComment(4));
+function isPrime(num) {
   //I feel there should be an additional check to stop at the squareRoot of the number or 13. Which ever is smaller
-  // because for large numbers example 929. the square root is 30.4795013083. we should not need to go up to 30(the square root). By 13(any number that has not found a divisor by 13 would never find a divisor) we already know that it would not be a prime
+  // because for large numbers example 929. the square root is 30.4795013083. we should not need to go up to 30(the square root). 
+  // By 13(any number that has not found a divisor by 13 would never find a divisor) we already know that it would not be a prime
   // const s = Math.min(Math.sqrt(num), 13);
   const s = Math.sqrt(num);
   for (var i = 2; i <= s; i++) {
     if (num % i === 0) return false;
   }
+  // num !== 1
+  // the above is wrong. But it is a way I mistakenly write it
+  // because 0 is also NOT a prime but it passes the test.
   return num > 1;
 }
 console.log(isPrime(4));
@@ -17,16 +29,16 @@ console.log(isPrime(4));
 //WHAT IS A PRIME NUMBER?
 // A prime number is a number that can be divided by only two numbers without a remainder. Itself and one.
 // E.g 4 is not a prime. because: 4 / 2 = 6. there is no remainder. That is 4 % 2 = 0
-// E.g 2 is a prime because 3 / 2 = 1remainder 1. That is 3 is3%2 = 1;
-// 1 is NOT a prime. I always felt it was since it is only divisible by 1 and itself(which is also one). but no licking of your own tail here this is not allowed
+// E.g 3 is a prime because 3 / 2 = 1remainder 1. That is 3 is3%2 = 1;
+// 1 is NOT a prime. I always felt it was since it is only divisible by 1 and itself(which is also one). but no licking of your own tail here that is not allowed. It only has 1 divisor. To be a prime you must have 2 distinct divisor.
 
-// is 1 a prime? NO One is not a prime because it can only divided by itself.
+// is 1 a prime? NO One is not a prime because it can only be divided by itself.
 // is 2 a prime? YES Two  is a prime because it can be divided by only itself and 1. Remember two is the smallest prime.
 // is 3 a prime? YES only divisible by 1 and 3
 
-// In our solution we start i from two (i =2; i < num)  instead of starting which we normally do (i =0; i < num).
+// In our solution we start i from two (i =2; i < num)  instead of starting how we normally do (i =0; i < num).
 // why not  start at 0? 0 divided by any number is undefined. And 0 is irrelevant to our check.
-// why not start at 1? we can not start at 1 we know everything is divisible by 1 and itself. A prime is a number only divisible by 1 and itself. It is difinitely divisible by one. that does not have any relevance to being a prime. It is when it is divisible by other numbers.
+// why not start at 1? we can not start at 1 we know everything is divisible by 1 and itself. A prime is a number only divisible by 1 and itself. It is definitely divisible by one. the question is, is it divisible by other numbers? from 2, 3, up to n-1.
 // why not start at 2? Yes we can. We start at 2. (i = 2; i < num)
 
 // Three is a prime because it can be divided by only itself and 1.

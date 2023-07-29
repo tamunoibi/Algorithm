@@ -42,8 +42,9 @@ const binarySearch = (val, arr) => {
 const binarySearchComment = (val, arr) => {
   let startIndex = 0;
   let stopIndex = arr.length - 1;
-  // normally to loop from beginning to end you do either:
-  /**1.
+  // normally to loop from beginning to end you have two options:
+  /** 1.
+  * here we stop at arr.length - 1 and we loop if the item is <= the stop. So it is inclusive of the stop item
   function accessAllArr(arr) {
     let start = 0;
     const stop = arr.length - 1;
@@ -52,11 +53,9 @@ const binarySearchComment = (val, arr) => {
       start++;
     }
   }
-  const ans = truthCheck([1,2,3]);
-  console.log({ans})
-  //here we stop at arr.length - 1 and we loop if the item is <= the stop. So it is inclusive of the stop item
-   */
-  /**1.
+   accessAllArr([1,2,3]);
+  /** 2.
+   * here we stop at arr.length and we loop if the item is < the stop. So it is NOT inclusive of the stop item. But the stop item is 1 more than the last index in the array so all items are accounted for
   function accessAllArr(arr) {
     let start = 0;
     let stop = arr.length;
@@ -65,10 +64,48 @@ const binarySearchComment = (val, arr) => {
       start++;
     }
   }
-  const ans = truthCheck([1,2,3]);
-  console.log({ans})
-  //here we stop at arr.length and we loop if the item is < the stop. So it is NOT inclusive of the stop item
+   accessAllArr([1,2,3]);
   */
+ //Common pitfalls: OFF BY ONE ERROR
+//  There are two common off by one error(where you loop one more time or loop one less time) to say loop inclusive of the stop condition but the stop condition is more than the array items.
+/** 1.
+  * here we stop if we are <= arr.length. That is Inclusive of arr.length. Array.length is 1 more than the total array items
+  *  arr  =     A   P   P   L   E _
+  *                               ^
+  *                               |
+  *       stop when we are = the total array items + 1
+  function accessAllArr(arr) {
+    let start = 0;
+    const stop = arr.length;
+    while(start <= stop) { //----->You stop 1 more than the array items
+      console.log(arr[start]);// output 1,2,3
+      start++;
+    }
+  }
+   accessAllArr([1,2,3]);
+  /** 2.
+  * here we stop if we are  < arr.length - 1. That is excluding of arr.length - 1. Array.length - 1 is exactly the total array items. So we stop 1 before the array item.
+  *  arr  =     A   P   P   L   E
+  *                         ^
+  *                         |
+  *       stop when we are < the total array items
+  function accessAllArr(arr) {
+    let start = 0;
+    let stop = arr.length - 1;
+    while(start < stop) { //----->You stop 1 more than the array items
+      console.log(arr[start]);// output 1,2,3
+      start++;
+    }
+  }
+   accessAllArr([1,2,3]);
+  */
+
+ 
+   // In Summarry
+  // To have a range inclusive of the number -> <=
+  // To have a range that stops one before the number <
+  // If you are using an length that means it is giving you the total number + 1. So you are to use a loop that goes excluding that number.
+
   // here we are saying while we are still less than the stopIndex
   // Why we are not using array.length but rather stopIndex is because the length of the array we are dealing with would change as we iterate.  At first it would be  array.length later it could be less than
   // for example if we start working on only the left part an array of 10 items would become just 5. so our ending point is the 5th index not the 10th index
@@ -81,7 +118,7 @@ const binarySearchComment = (val, arr) => {
   while (startIndex <= stopIndex) {
     // we are getting the index of the middle item:
     // this was the original solution for the middle point, but I found a shorter more logical alternative
-    // I still kept this old solution in case I find any issue with the one I came up with
+    // I still kept this old solution in case I find any issue with the one I came up with, or if I undrestand it better later
     // const middle = startIndex + Math.floor((stopIndex - startIndex) / 2);
 
     const middle = Math.floor((startIndex + stopIndex) / 2);
@@ -141,13 +178,14 @@ const binarySearchComment = (val, arr) => {
       // this clearly means we are dealing with the right hand side.
       // we make the first element of the array to be the right hand side
       // and then the stopIndex(the end of the array) is not changed
-      //           |===started here before==========|
+      //           |===>start was here here before
       //           |
       //           *                |
       // example: [0, 1, 2, 3, 4, 5,| 6, 7, 8, 9, 10]
       //                          ^ | ^            ^
       //                          |   |            |
       //                          Mid |start===stop|
+      //                              |===>start is moved here. It is has gone on the right hand side of MID
       //array has 11 items. startIndex = 0; stopIndex = 10; middle = 5; say we are looking for 7.
       // startIndex is changed to index 6; stopIndex is not changed and remains index 10; so this means the right half of the array is what we are walking with
       //

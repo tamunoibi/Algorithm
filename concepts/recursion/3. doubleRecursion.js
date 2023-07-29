@@ -22,12 +22,12 @@ function doubleRecursionNumComment(num) {
     recursion(nums - 1) || recursion(num - 2);
     console.log(n);
     /**
-     *  A double recursion is easier to follow when you draw it like like a binary tree.
-     *  it first goes from begining to end like a single recursion. or loop
-     *  but for each loop it saves the other recursive call. When it has gone to the end of the loop and returned
-     *  It goes to the last saved value. then runs to the end of that loop
+     A double recursion is easier to follow when you trace an example with a binary tree showing the different function calls.
+     *  1. it  goes from beginning to end like a single recursion or loop. but for each loop it saves the other recursive call. 
+     *  2. When it has gone to the end of the loop and returned.
+     *  3. It goes to the right of the last tree value. Repeat From step 1
      * Example
-     * input: 5
+     * nums = 5
                       5
                     /   \
                   4    

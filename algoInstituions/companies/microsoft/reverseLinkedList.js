@@ -1,5 +1,5 @@
 /**
- * The things that are required to understand this iis
+ * The things that are required to understand the iterative appraoch this include:
  * 1. while loops
  * 2. traversing a linked list iteratively(/Users/tamunoibi/Documents/workspace/algorithim/concepts/linkedList/traverseLinkedList.js)
  * 3. how to perform a swap using temp variables
@@ -14,7 +14,7 @@
  * 3. Value vs. Reference assignement. When you create a duplicate by saying objectA = objectB you are merely creating a reference and any changes to objectA is also a change to objectB. That is why when we change the head we change the newHead
  * 4. how to create a duplicate newHead so that when we reasign the values head the newHead would not get reasignned
  * 5. Recursion and how it operates that the returned values can be stored in a varialbe then you can reasign newHead and it would affect it. 
- * 6. That the  recursion stop one step before the last element and the if block runs then returns that last item to the recursion. Is there another functionn where the thing that is returned is not immidiately acted on? se 
+ * 6. That the  recursion stop one step before the last element and the if block runs then returns that last item to the recursion. Is there another functionn where the thing that is returned is not immidiately acted on?
  */
 
 // their are two ways to reverse a linked list
@@ -32,29 +32,6 @@ const linkedList = {
   },
 };
 
-function reverseRecursivelyTwo(head) {
-  if (head === null || head.next === null) {
-    return head;
-  }
-  let newHead = reverseList(head.next);
-  // The previous elements next is set to head
-  head.next.next = head;
-  // the current elements next is set to null. If you do not do this the first element would not be set to null.
-  head.next = null;
-  return newHead;
-}
-
-function reverseLinkedListIteratively(head) {
-  let prevTemp = null;
-  let nextTemp;
-  while (head !== null) {
-    nextTemp = head.next;
-    head.next = prevTemp;
-    prevTemp = head;
-    head = nextTemp;
-  }
-  return prevTemp;
-}
 function reverseLinkedListRecursivelyOne(head) {
   if (head === null) {
     return null;
@@ -67,7 +44,32 @@ function reverseLinkedListRecursivelyOne(head) {
   head.next = null;
   return newHead;
 }
-function reverseLinkedListIterativelyHelperFunction(head) {
+function reverseRecursivelyTwo(head) {
+  if (head === null || head.next === null) {
+    return head;
+  }
+  let newHead = reverseList(head.next);
+  // The previous elements next is set to head
+  head.next.next = head;
+  // the current elements next is set to null.
+  // If you do not do this the first element would not be set to null.
+  head.next = null;
+  return newHead;
+}
+
+function reverseLinkedListIterativelyOne(head) {
+  let prevTemp = null;
+  let nextTemp;
+  while (head !== null) {
+    nextTemp = head.next;
+    head.next = prevTemp;
+    prevTemp = head;
+    head = nextTemp;
+  }
+  return prevTemp;
+}
+function reverseLinkedListIterativelyTwo(head) {
+  // This splits it into helper function and the reversing function
   let prevTemp = null;
   let nextTemp;
   function swap(head, prev) {
@@ -78,89 +80,6 @@ function reverseLinkedListIterativelyHelperFunction(head) {
     nextTemp = head.next;
     swap(head, prevTemp);
     head = nextTemp;
-  }
-  return prevTemp;
-}
-function reverseLinkedListIterativelyComment(head) {
-  let prevAddress = null;
-  let temp;
-  // we are stopping at head being null because
-  //first:  head =  { val: 6, next: { val: 7, next: null, }, },
-  //second: head =  { val: 7, next: null, },
-  //third   head =   next: null ---this means we should stop
-  while (head !== null) {
-    arr.push(head.next);
-    // Save the value of the currentAddress we plan to overwrite
-    temp = head.next; //-->keep a copy of the node
-    // overwrite the current value of next to  ( overwrite it to null on first iteration)
-    head.next = prevAddress; //--> overwrite the node
-    /**
-     * This two lines go hand in hand:
-     *  `temp = head.next;
-     *   head.next = prevAddress;`
-     * The idea is I want to change the current elements next.
-     * But before changing the value I must  save it in a value because I would have to use
-     * the value at a subsequent time
-     */
-
-    //Update the previousAddress(the one that was initialized as null ) to be head (that is the current node before  it was before it was changed)
-    // This place some times I make mistake and say prevAddress = temp
-    // but that is wrong.
-    /**
-     * This line is setting the next items next. And I want the next items next to be the full object I have constructed
-     * that full object on the first iteration is {val: next: null}
-     * on the second iteration is {val: next: null}
-     * on the next iteration the prevAddress I am setting here would be used as the address of that element. so it is the object I have constructed thus far
-     */
-    /** */
-    /**  FIRST Iteration prev would be  { val: 5, next: null }
-     *   because I reconstructed the first object and changed its next to be null
-     *   The way the first object was:
-              {
-            val: 5,
-            next: {
-              val: 6,
-              next: {
-                val: 7,
-                next: null,
-              },
-            },
-          }
-     * 
-       *   The way the first object was changed to:
-              {
-            val: 5,
-            next: null
-              }
-     * 
-     * 
-     * */
-
-    /** SECOND iteration: the item was: { val: 5, next: null,  }
-     *   I reconstructed the second object and changed its next to be { val: 5, next: null }
-     *   The way the second object was:
-             {
-              val: 6,
-              next: {
-                val: 7,
-                next: null,
-            },
-          }
-      * 
-      *   The way the second object was changed to:
-          {
-            val: 6,
-            next:  { val: 5, next: null } //-------->its next was updated to be the previous element. Note not just the previous elements next.
-          }
-      */
-    console.log({ prevAddress, head, temp });
-    prevAddress = head;
-
-    // on each iteration we set the head to be the object in head.next
-    // so the value of head  is progressively reducing
-    // this is the way to keep the loop moving to next
-    head = temp;
-    console.log({ prevAddress, head });
   }
   return prevTemp;
 }
@@ -366,7 +285,91 @@ function reverseLinkedListRecursivelyOneComment(head) {
 
   return newHead;
 }
-function reverseLinkedListIterativelyHelperFunctionComment(head) {
+function reverseLinkedListIterativelyOneComment(head) {
+  let prevAddress = null;
+  let temp;
+  // we are stopping at head being null because
+  //first:  head =  { val: 6, next: { val: 7, next: null, }, },
+  //second: head =  { val: 7, next: null, },
+  //third   head =   next: null ---this means we should stop
+  while (head !== null) {
+    arr.push(head.next);
+    // Save the value of the currentAddress we plan to overwrite
+    temp = head.next; //-->keep a copy of the node
+    // overwrite the current value of next to  ( overwrite it to null on first iteration)
+    head.next = prevAddress; //--> overwrite the node
+    /**
+     * This two lines go hand in hand:
+     *  `temp = head.next;
+     *   head.next = prevAddress;`
+     * The idea is I want to change the current elements next.
+     * But before changing the value I must  save it in a value because I would have to use
+     * the value at a subsequent time
+     */
+
+    //Update the previousAddress(the one that was initialized as null ) to be head (that is the current node before  it was before it was changed)
+    // This place some times I make mistake and say prevAddress = temp
+    // but that is wrong.
+    /**
+     * This line is setting the next items next. And I want the next items next to be the full object I have constructed
+     * that full object on the first iteration is {val: next: null}
+     * on the second iteration is {val: next: null}
+     * on the next iteration the prevAddress I am setting here would be used as the address of that element. so it is the object I have constructed thus far
+     */
+    /** */
+    /**  FIRST Iteration prev would be  { val: 5, next: null }
+     *   because I reconstructed the first object and changed its next to be null
+     *   The way the first object was:
+              {
+            val: 5,
+            next: {
+              val: 6,
+              next: {
+                val: 7,
+                next: null,
+              },
+            },
+          }
+     * 
+       *   The way the first object was changed to:
+              {
+            val: 5,
+            next: null
+              }
+     * 
+     * 
+     * */
+
+    /** SECOND iteration: the item was: { val: 5, next: null,  }
+     *   I reconstructed the second object and changed its next to be { val: 5, next: null }
+     *   The way the second object was:
+             {
+              val: 6,
+              next: {
+                val: 7,
+                next: null,
+            },
+          }
+      * 
+      *   The way the second object was changed to:
+          {
+            val: 6,
+            next:  { val: 5, next: null } //-------->its next was updated to be the previous element. Note not just the previous elements next.
+          }
+      */
+    console.log({ prevAddress, head, temp });
+    prevAddress = head;
+
+    // on each iteration we set the head to be the object in head.next
+    // so the value of head  is progressively reducing
+    // this is the way to keep the loop moving to next
+    head = temp;
+    console.log({ prevAddress, head });
+  }
+  return prevTemp;
+}
+function reverseLinkedListIterativelyTwoComment(head) {
+  // This splits it into helper function and the reversing function
   let prevTemp = null;
   let nextTemp;
   function swap(head, prev) {
@@ -376,7 +379,7 @@ function reverseLinkedListIterativelyHelperFunctionComment(head) {
     prev = head;
   }
   while (head !== null) {
-    // Create a backup of head, so that you can move to that next element at the roof. On the next line you modify its value
+    // Create a backup of head, so that you can move to that next element at the root. On the next line you modify its value
     nextTemp = head.next;
     // Swap the current element's next to be the whole of the previous element
     swap(head, prevTemp);

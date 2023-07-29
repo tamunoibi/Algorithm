@@ -4,10 +4,11 @@
 /**
  * The things that are required to understand this iis
  * 1. How to divide an array into two halfs
- * 2. How to sort by removing the first element and adding it to the new array.
- * 3. Take the operation from having two array items to having three items. Then explain it with up to 8 items. This is because of recursion. Two operations shows how the code runs without the recursion while 3 shows with recursion. Progressively. This recursion part is complex so take it step by step don't just fly to 8 array items.
- * 4.
+ * 2. How to combine two individually sorted arrays into one. The pattern involves creating a new array. This array would be empty at first. You compare the first elements of the two arrays passed in and add the smaller one to the newArray.
+ * 3. How double recursion works. Specifically indirect recursion. mergeSortedArray(recurse(left), recurse(right))
+ * 4. Explain how the function runs. Give several examples and progressively build the difficulty of the examples. The need for this detailed explanation of several examples is because of recursion. Recursion needs to be understood progressively. The example be structured like this: a. Start with the function being passed two array items. eg. arr = [9, 1]. This example would not call the recursive part of the function so it is easier to follow; b. Take the operation from having two array items to having three items. eg. arr = [9, 1, 6];  An example with 3 items would only have few recursive calls this would be a little more complex to follow but still doable. Then explain it with up to 9 items example: [5, 9, 3, 1, 3, 2, 6, 8, 4]. Two operations shows how the code runs without the recursion while 3 shows with recursion. Progressively. This recursive function calls is a complex so take it step by step don't just fly to examples with  8 array items.
  * 5.
+ * 6.
  */
 function merge(left, right) {
   let sortedArr = [];
@@ -27,7 +28,7 @@ function mergeSort(arr) {
   const half = Math.floor(arr.length / 2);
   const left = arr.splice(0, half);
   const right = arr;
-  return merge(mergeSort(left), mergeSort(right));
+  return mergeSortedArrays(divideTillOne(left), divideTillOne(right));
 }
 function mergeComment(left, right) {
   let sortedArr = []; // the sorted elements will go here
@@ -88,13 +89,11 @@ function mergeComment(left, right) {
 }
 function mergeSortComment(arr) {
   /**
-   * The logic is we have two functions: one function to divide the array into two and the other to sort it
+   * The logic is we have two functions: one function to divide the array into two and the other to combine the two array
    * Tip: Mentally when trying to remember an algorithm use an example if you use an example it is easier to visualize it.
    * the example to visualize this is using an array with two items arr = [200, 1]
    * 1. Divide: the first function divides it into two parts part 1: [1] part 2:[200]
-   * 2. sorter: the second function sorts the two arrays. It creates a new empty array []. Then adds the smaller of the two items. which is 1 to the new array. therfore new array becomes [1] then it merges the newArray and the leftArray (that is 200) plus the right array  [...newArray, ...left, ..,right] output [1, 2]
-   * 3. 
-   * 
+   * 2. combineInSortedForm: the second function combines the two arrays in a sorted form.  It creates a new empty array []. Then adds the smaller of the two items. which is 1 to the new array. therefore new array becomes [1] then it merges the newArray and the leftArray (that is 200) plus the right array  [...newArray, ...left, ..,right] output [1, 2]
    */
   // the base case is array length <=1
   // if there is only one item in the array then return the array
@@ -128,11 +127,109 @@ function mergeSortComment(arr) {
 
    */
   /**
-   The things that were unclear in merge sort was the order of operation.
-   and what variable would  run with each call
+   The things that were unclear in merge sort was:
+    1. the order of operation.
+       There are three functions that are being called in the statement: merge(mergeSort(left), mergeSort(right))
+       the three functions are: 
+        a. mergeSortedArraysIntoOne()
+        b. divideSingleArrayUntilOneIsLeft(left)
+        c. divideSingleArrayUntilOneIsLeft(right)
+      Functions run in the order they are called. Which means since mergeSortedArraysIntoOne() is called first it would run first.
+      mergeSortedArraysIntoOne
+        mergeSortedArrays into one is given two arrays that are already sorted and it merges them into one.
+        example: [1, 4, 5] and [3] would become [1, 3, 4, 5]
+        Note: this is why I used to get confused. I am not simply calling an array item.
+        mergeSortedArraysIntoOne([1, 4, 5],  [3])
 
-   the order of operation is form left to right. 
-  
+        I am rather calling two functions. 
+        That is why you need to express it as a tree so that you can keep track of the movements. 
+        Because I am making two calls. I would follow up on the left side and come back later for the right side. Readup on double recursion
+         /**
+   * Example: 
+  const arr = [1, 2, 3, 4, 5 ,6, 7,8,9];
+
+   * Solution: 
+  const half = Math.floor(item.length/2);   // 4
+  const left = item.splice(0, half); // [ 1, 2, 3, 4 ]   // that is [1, 2, 3, 4, 5 ,6, 7,8,9].splice(0, 4);start at index zero and remove four items from the  array. so it is removing i. 1, ii.2 iii. 3, iv. 4
+  const right = arr; [5, 6, 7, 8, 9 ]
+
+
+   * Further explanation: 
+  // the original arr is [1, 2, 3, 4, 5 ,6, 7,8,9]
+  //  [
+        1, 2, 3, 4-->cut out four items from the array and stored as left
+        5 ,6, 7,8,9-->the remainder in the array stored as right
+      ]
+
+   */
+  /**
+   The things that was unclear in mergeSort was:
+    1. the order of operation.
+       There are three functions that are being called in the statement: mergeSortedArraysIntoOne(divideArrayUntilOneItemIsLeft(left), divideArrayUntilOneItemIsLeft(right))
+       the three functions are: 
+        a. mergeSortedArraysIntoOne()
+        b. divideArrayUntilOneItemIsLeft(left)
+        c. divideArrayUntilOneItemIsLeft(right)
+
+      Functions run in the order they are called. Which means since mergeSortedArraysIntoOne() is called first it would run first.
+      mergeSortedArraysIntoOne
+        mergeSortedArrays into one is given two arrays that are already sorted and it merges them into one.
+        example: [1, 4, 5] and [3] would become [1, 3, 4, 5]
+        Note: this is why I used to get confused. 
+        I am not simply calling an array item
+        mergeSortedArraysIntoOne([1, 4, 5],  [3])
+
+        I am rather calling two functions. 
+        That is why you need to express it as a tree so that you can keep track of the movements. of the internal functions.
+        Because I am making two calls. I would follow up on the left side and come back later for the right side. Read up on double recursion. That is where this technique is explained in detail
+        A double recursion is easier to follow when you draw it like like a binary tree.
+        it first goes from beginning to end like a single recursion. or loop
+        but for each loop it saves the other recursive call. When it has gone to the end of the loop and returned
+        It goes to the right of the last tree value. then runs to the end of that loop
+     * Example
+     * input: [1, 2, 3, 4, 5 ,6, 7,8,9]
+     * 
+            [1, 2, 3, 4, 5 ,6, 7,8,9]
+                    /   \
+         [1, 2, 3, 4]  
+                /   \  
+           [1, 2]   
+              /   \      
+          [ 1 ]  <--- we return when arr length is less than or equal 1
+           When we return from the left side.
+             The function call to mergeSortedArraysIntoOne does NOT run. 
+            NOTE: we only run mergeSortedArraysIntoOne()  when both functions have returned. divideArrayUntilOneItemIsLeft(left) and divideArrayUntilOneItemIsLeft(right) have returned.
+            here only mergeSortedArraysIntoOne(left) just returned
+            arr = [1, 2, 3, 4, 5 ,6, 7, 8, 9]
+                  [ 1, 2, 3, 4 ]      [ 5, 6, 7, 8, 9 ]
+              [ 1, 2 ]      [ 3, 4 ]
+          [ 1 ]      [ 2 ]
+          we call split left( [1, 2, 3, 4, 5 ,6, 7, 8, 9] )
+          we call split left( [ 1, 2, 3, 4 ] )
+          we call split left( [ 1, 2 ]  )
+          we call split left( [ 1]  )
+          Then we return with [1]
+
+            we move on to the second function  mergeSortedArraysIntoOne(right)
+                     [2]  <--- we return when arr length is less than or equal 1
+          
+
+
+          ------------------------------------merge([1], [2]) returns[1, 2]
+            When we return from the right side.
+             The function call to mergeSortedArraysIntoOne actually runs. 
+            NOTE: we only run mergeSortedArraysIntoOne()  when both functions have returned. divideArrayUntilOneItemIsLeft(left) and divideArrayUntilOneItemIsLeft(right) have returned
+          join([1], [[2]])   
+***********************************************************************************
+We move to  [ 3, 4 ]:
+                  [3, 4]
+                    /   \
+                  [3]   <--- we return when arr length is less than or equal 1
+
+We move to[4]:
+                     [4]  <--- we return when arr length is less than or equal 1
+                  
+                
 
    Example 1.
    Question
