@@ -302,7 +302,8 @@ B. Wants   (
                 pancake, parfait, chicken wrap ]
    fitness    [ arabic belly dance class, dance class, gym, swimming,  ]
    skills     [ makeupclass, cat walking,  ]
-   kitchen    [ kettle, mortar, plates, gas ]
+   kitchen    [ kettle, mortar, plates, gas, ceive, fry pan, brush,
+                kitchen towel, light bulbs,  ]
    house      [ iron, scale, water dispenser,
                 water heater, bed, mirror, blanket, bedsheets,
                ]
@@ -1157,22 +1158,19 @@ Madams Project
 ............................................................
 - Review resume
   Make sure years in linkedin and turing align with visa application 
-- organise computer folders. Add books to reading list and delete them leave only one.
+- organise computer folders. 
 - call CNN children (Chioma() and Jerry())
 - print tracker (3 others) to use to track: 1.exercise 2. work 3. content
-- add toothbrush to makeup purse. The toothbrush is for edges
 - call Opeyemi time for algo class. Twice a week.
-- signout of email and snapchat notifications on your phone
+- signout of quora and snapchat notifications on your phone
 - Money from gig: send messageToScamDam about gig money, send a demand letter to gig. Speak with Ify how you would go about it 
-- organise thoughts I saved on whatsapp
+- organise thoughts I saved on whatsapp. Create a document of them and copy it to a new tab on vscode and add it one after the other
 - copy out the affirmation from the hardcover note
 - Makeup
     - copy out the note on makeup taught by Bibi
     - create a makeup rotuine. watch tutorials for brows use tiktok video
-- market for healthy food
-- chores()
-- cook
-- water
+- buy sweetcorn, water (chicken, corned beef or sardine)
+- cook stir fry vegetables, 
 - call with Ope
 - belly dance
 - video creation
