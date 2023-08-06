@@ -238,7 +238,7 @@ So many lessons I have learnt on this wonderful adventure callled life. I would 
          To master your life control your attention if you want to master your life you have to master your mind, and to master your mind you have to master your attention. Where your attention goes your life goes. Instead of looking at the things that you do not like in your life focus your attention onn where you want to go and where you would rather be 
 
 
-       h.
+       h. how to wait while you archieve things(example weight loss, carrear growth, content growth). Don't be looking at the thing you wish to archieve make sure you have a specified goal broken into maybe 2week sprints, time frame and actions  for each day. All your focus should be on those actions. You could track your goals by having 2week sprints all your all focus should be on  of consitency for those 14 days. After about 4 sprints you are bound to see tremendious progress from focusing on your actions than on your goals
 
 
 12. PASTOR M JEWELRY AND MUM FOOD BUSINESS
@@ -265,32 +265,38 @@ Offer free delivery or delivery at 200 naira on a particular day example 200nair
 14. NEEDS/WANTS
 .............................................................
 
-A. Needs   (  fumigate, mac(speed, screen), sunshades, 
-               bathroom slippers, outing slippers, repair kettle, 2k, plumbing, grocery[see todoist], monthly([see Monthly below]))
+A. Needs   (   
+               gym(8), 
+               fumigate (4),
+               data (5),
+               grocery[see todoist, dustbin, maggi, crayfish, soap, powder ] (20), 
+               hair (5),
+               monthly([see Monthly below]))
 B. Monthly  ( contribution, data, fitness)
 B. Wants   (
     makeup    [mac powder, Fenti Foundation, victoria
-               secret lip gloss, cage for the inner neud, Debby lister for the outer brown, lash glue for sensitive
-               skin, black pencil liner, brow gel ] 
-    perfume   [that type of Ufuoma Zara perfume]
+               secret lip gloss, Kayge for the inner neud, Debby lister for the outer brown, lash glue for sensitive
+               skin, inglot duraline, hegal esther eyeliner, black pencil liner that Aunty Deinma type, brow gel, Nuban Beauty   mirror hand/table] 
+    perfume   [Zara perfume that type of Ufuoma ]
    sport wear [2piece sports wear]
-   Hair       [bone straight, pixie curls]
-   clothes    [mom jeans, sweater, shorts, ]
-   shoes      [casual slippers, ]
-   pants      []
-   nightie    []
-   jewelry    []
+   Hair       [bone straight, pixie curls, deep wave]
+   clothes    [mom jeans, sweater, black leather shorts, ]
+   shoes      [casual slippers, crocks, bathroom slippers]
+   pants      [pant and bra set]
+   nightie    [Big T, 2 piece]
+   jewelry    [pearl, gold]
    bag        []
    outing     [swim at Presidential, Dance at Asia Town, Out to club ]
    photoshoot [
                Clothes: (black turtle neck, purple, silk gown, ) 
               Buy (turtle neck, big earring, ) 
               do (frontal hair, nails, mzweezy makeup)]
-   Gadgets    [Ipad, iphone 15, headset, mic, 2022 macbook]
+   Gadgets    [boya wireless mic, Ipad, iphone 15,
+               2022 macbook, headset, Fix glasses, laptop(speed, screen), ]
    mum things [renovate house, clothes]
    renovation [wardrobe, screed and paint, curtain inner and hanging stuff,
                kitchen cabinet, kitchen tab,
-               bathroom tiles, toilet poo,  bathroom shower head,
+               bathroom tiles, toilet poo,  bathroom shower head, plumbing,  repair kettle
                ]
    tasty foods[ dirty fried Rice, isie-ewu,
                 pancake, parfait, chicken wrap ]
@@ -298,14 +304,14 @@ B. Wants   (
    skills     [ makeupclass, cat walking,  ]
    kitchen    [ kettle, mortar, plates, gas ]
    house      [ iron, scale, water dispenser,
-                water heater, bed, mirror, blanket
+                water heater, bed, mirror, blanket, bedsheets,
                ]
    books      [ hard copy of my favourite books, see notion ]
    work       [ css course, algorithm book ]
    monnthlGift[ibifiri, ibiba, dienye(food), 
                mummy(data,    clothes), ]
    major       (masters fees 600, mummy refund 310, )
-   Investment  (Buy lad 1.5M)
+   Investment  (Buy land 1.5M)
 obligations   [send money to wasini for madam project]
 
 
@@ -431,35 +437,42 @@ I feel like this is a challenging phase but it is extremely important for me to 
 My goal is to be employed earning 5k dollars. 
 
 TODO:
+- Algo
+- turing
 - download the josh css course
 - Do one video in the course
 - complete turing profile
 
-- Take turing quiz for
-   - english listening
-   - personality test
-   - reading comprehension
-   - team leadership test
-   - team lead tech test
+- Take turing quiz for 4/18
    - js
    - html/css
+   - data structures and algorithms
+
    - git
    - bash/shell
-   - data structures and algorithms
    - software fundamentals
+
+
+   - typescript
+   - redux
+   - express
    - postgressql
    - react js 16.8
-   - redux
-   - typescript
-   - express
-- 
-- apply(see todays application below)
+
+
+   - socket.io
+   - rest api
+   - tailwind css
+   ✅ team lead tech test
+   ✅ team leadership test
+   ✅ english listening(question error)
+   ✅ reading comprehension
+   ✅ personality test
+
+
 Todays application
-- apply at arc
-- apply at law depot
-- apply at dat one you sent the link to whatsapp
-- apply at that one he sent you on linkedin
-- apply at that one you have on your screenshot
+
+
 
 Done
 ✅ 
@@ -470,21 +483,32 @@ Done
 TO Do:
 A. Apply for a job
 - turing
+- Make vdieo for arc
+- Update the timelines in your cv and linkedin
 - referrals 
 - decagon
 - andela
-- arc
 - linkedin
 - codementor
 - discord group: black alogrithm groups
 - discord group: others I am on I think crypto
 - twitter
-- emails from linkedin
+- apply to Nigerian companies on linkedin
+- emails from linkedin (turn off for canada on for remote everywhere)
 - fb search for other groups
 - fb react native group
 - fb group mentioned by Sammi [what is it even called?]
 - remote.ok
 - angelist
+- Jobspresso
+- Remote OK
+- DevRemote
+- We Work Remotely
+- FlexJobs
+- Remote Tech Jobs
+- Hired 
+- SimplyHired
+- Working Nomads
 - those sites you took screen shot()
 
 Turing
@@ -500,22 +524,34 @@ Referrals
 - Jasmine
 - Andela guy at so fresh
 - Clinton
-- Collosus andela colleague()
+- Kola
+- Collosus: Ferguson
+- Collosus: Evans
+- Kola Bright
+- Kola Dev
+- Ukn Dev
+- Xrole
+- Fred Jog
+- Xrole
+- Justice Dev
+- Ned
+- Hope Andela
 - Daniel
+- that guy Jasmine always talks of: 
 - That girl that was your team lead
 - Kingsley
 - Ayo
 - That Andela guy that went to convenant 
 - That Andela guy that you met at bootcamp. I think it is David
-- That Andela guy from PH
+- Frank: that Andela guy from PH
 - Andela devs on linkdedinn
 - Hng cto
 - Olumide
 - Juilet
 - Nerdy
-- Menaget colleagues
+- Menaget colleague: Oseni
 - Simi
-- Femi 
+- Femi
 - random people on twitter
 - random people on linkedin
 
@@ -607,34 +643,42 @@ Places I can shop
 - liase with Praise
 
 MAKEUP
+1. PREP YOUR FACE
+2. 
+
 HOW TO PREP YOUR FACE
 A. Use a sharp razor to groom the brows
 B. Wipe your face with wipes
-C. Prep your brows
+C. Prep your brows - steps written below
 D. Draw your brows
+
+
 HOW TO PREP YOUR BROWS
 A. Use beauty blender to apply foundation on the brows. This help to get a flawless look
-B. Use beauty blender or setting brush to apply setting powder on your brows. Thi drys the foundation.
+B. Use beauty blender or setting brush to apply setting powder on your brows. This drys the foundation.
 C. Use a spooly to brush the brows up
 HOW TO DRAW BROWS
 a. The bottom
 - You start with a slanted Line at the bottom
 You would connect the top to the bottom of this slanted line.
 b. The top
- - You take a straight line when
+ - You take a straight line then
  - When at the arch you take a mild curve and connect it to the tail. Note do not just do a sharp v. See picture for illustration
 c. Fill it in
    starting at the inner side (the side of your bows closest to your eyes) draw hairlike strokes the bottom then draw hairlike strokes at the top then use your spooly to blend them in. 
  Tips
  - Draw slowly. 
  - Ensure your pencil is sharp
- - Use a had mirror so you can see
+ - Use a hand mirror so you can see
+ - Make sure the lightening is Bright. So you can see. You can use ring light or day light.
  
  CONCEALING
- Conceal the brows at the tail axis. Use a lighter shade so that it looks highlighted. Then use a darker shade for the begininng. When you take the concealer reduce it. Do not apply excess concealer you can also reduce it by applying it on your eyelids.
- Use a damn beauty blender to blend the concealr
+ - Conceal the brows at the tail axis. Use a lighter shade so that it looks highlighted. 
+ - Then use a darker shade for the begininng.
+ - Use a damn beauty blender to blend the concealr
   Tips
  - Use the body of the concealer brush to apply it and not the tip
+ - When you take the concealer reduce it. Do not apply excess concealer you can also reduce it by applying it on your eyelids.
 
 
 Actions 
@@ -689,7 +733,7 @@ jobs you hate.
 
 Positives of being single
 We must always  look on the Bright side of things
-  -  Being newly single allows you to get to know yourself again, try new things, and potentially meet new friends.
+  -  Being newly single allows you to get to know yourself again, try new things, and potentially meet new friends,find new hobbies
 
 Actions 
 A. Take your fitness serious. Part of it is looking overweight. If you don't feel beautiful you can ont attract beauty or 
@@ -799,6 +843,24 @@ F.
 Focus Linkedin
 A. 
 B. 
+
+- The day before I film content
+  - Dress: plan and iron
+  - nails
+  - hair
+  - brows:  shape if needed
+  - Buy lashes if needed
+  - clean room
+  - content script and rehearsal
+  - Charge gadgets
+  - Setup fiming gear
+  - 
+  
+- The day I film content
+  - bath 
+  - makeup 
+  - dress
+  - film
 
 Nridionma CONTENNT
 - follow up and take the class
@@ -1093,55 +1155,25 @@ Madams Project
 
 20. TODO
 ............................................................
-- Review resume.
-  Make sure years align with visa application 
-  and also linkedin
-calls
-- Opeyemi time for algo class. Twice aweek.
-
-Unnecessary pressure
-- Call Ify that you would not attend
-     Ify wedding decide if you would attend and sew dress or let her know that you can not attend
-- Call Ufuoma that you would not buy perfume
-- Don't send for algorithim book
-     Send for algorithim book. 
-     Preview the books and see the one you understand and has a lot of information you would like to have in hardcopy. Also ask Jasmine and Ned which ones to get.  Check the books and decide on the one you want
-- Organise laptop. Add books and add them to reading list and delete them leave only one.
+- Review resume
+  Make sure years in linkedin and turing align with visa application 
+- organise computer folders. Add books to reading list and delete them leave only one.
 - call CNN children (Chioma() and Jerry())
-
-
-
-later
+- print tracker (3 others) to use to track: 1.exercise 2. work 3. content
+- add toothbrush to makeup purse. The toothbrush is for edges
+- call Opeyemi time for algo class. Twice a week.
+- signout of email and snapchat notifications on your phone
 - Money from gig: send messageToScamDam about gig money, send a demand letter to gig. Speak with Ify how you would go about it 
-- add Number.NEGATIVE_INFINITY also written as   -infinity to list of number methods and properties. Also, why is the number list not with the list of js methods
 - organise thoughts I saved on whatsapp
-- organise computer foldrs
 - copy out the affirmation from the hardcover note
-- write out the lessons in their appropriate plaace:
-  - lessons learnt from Mzweezy and law guy
-  - lesson: that depression is worse when you are tired an over stressed or did not sleep well. 
-  - lesson: depression is worse when you have nothing to look forward to like now that I have a high paying job and my travel to look forward to I wa able to go through a lot
-- Add to how to solve algorithims: the need break down complex algorithim into various variables and explain the variables and the formla
-- Add book to reading list: 
-   - tough times don't last but tough people do
-   - Why men love bitches
-   - Set boundaries find Peace by Nedra Glover
-   - Attached by Amir Levine
-   - Measure what matters y John Doer
-   - Feel the fear but do it anyway by Susan Jeffers
-   - the artist way by Richard Cameroon
-   - Stoicism for inner Peace by Einzelganger
-   - books on focus: this is my major issue
-   - Isaac Newton by walter Isacsoon
-   - Autobiography of a Yogi Steve Jobs favourite book
-- add Alogrithim books
-   - data structure and algorithims made easy
-   - clrs
-- add Alogrithim video
-   - log2base 2 algorithim 
-- Add to shopping list
-   - date syrub 
-- buy: 
-  - wipes, 
-  - notebook for algorithims
-  - maths notebook,
+- Makeup
+    - copy out the note on makeup taught by Bibi
+    - create a makeup rotuine. watch tutorials for brows use tiktok video
+- market for healthy food
+- chores()
+- cook
+- water
+- call with Ope
+- belly dance
+- video creation
+- work(turing, neetcode, application, )

@@ -34,7 +34,7 @@ function subsets(nums) {
   return res;
 }
 // O(2^N)
-function subsets(nums) {
+function subsetsComment(nums) {
   // res is an empty array where we would push the answers to
   const res = [];
   const subset = [];
