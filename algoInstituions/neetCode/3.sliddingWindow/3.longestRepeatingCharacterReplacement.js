@@ -311,7 +311,7 @@ function longestRepeatingCharacterExplanation(str) {
     const windowLength = right - left + 1;
 
     /**The check: while (windowLength - Math.max(...Object.values(count)) > k)
-     * WE Have to reduce the window IF WE HAVE EXCEEDED THE ALLOWED CHANGES
+     * we reduce the window if WE HAVE EXCEEDED THE ALLOWED CHANGES
      *
      *
      *

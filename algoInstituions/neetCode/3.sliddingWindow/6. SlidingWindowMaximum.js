@@ -2,9 +2,9 @@
  * Example:
  * nums = [8, 7, 6, 9]
  * k = 2
- * output =[8, 7, 9]
+ * output = [8, 7, 9]
  * Explanation:
- * The size of the window is k.  is 2.
+ * The size of the window is k. In this case  2.
  * For each window what is the maximum number?
  * you are to return an array of all those numbers.
  *  window             max
@@ -21,7 +21,7 @@
  * 
  */
 // sliding window: O(K * (n - k))
-function (nums, k) {
+function maxWindow(nums, k) {
     const maxOfNums = (begin, end, items) => {
         let biggest = NUMBERS.NEGATIVE_INFINITY;;
         for (let i = begin; i <= end; i++) {
@@ -41,7 +41,7 @@ function (nums, k) {
 }
 
 //  O(K * (n - k))
-function (nums) {
+function maxWindow(nums) {
     /** maxOfNums
      * maxOfNums is a helper function to return the biggest
      * item from a range of numbers.
@@ -191,7 +191,7 @@ function (nums) {
 
 
 // using monotonically decreasing Queue: O(N);
-// This does not work and I have not taken the time to understant it well
+// This does not work and I have not taken the time to understand it well
 function slidingWindowMaximum(nums) {
     const output = [];
     let left = 0;
@@ -202,7 +202,7 @@ function slidingWindowMaximum(nums) {
 
     while (r < nums.length) {
         // while the q is not empty and smaller values exits in the queue
-        while (q and nums[q[-1]] < nums[r]) {
+        while (q && nums[q[-1]] < nums[r]) {
             q.pop()
         }
         q.append(r);

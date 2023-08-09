@@ -12,6 +12,7 @@
  *     [1,2,3]
  *      0 1 2
  */
+// O(2^N)
 function subsets(nums) {
   const res = [];
   const subset = [];
