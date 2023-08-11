@@ -444,7 +444,7 @@ TODO:
 - Do one video in the course
 - complete turing profile
 
-- Take turing quiz for 4/18
+- Take turing quiz for 6/19
    - js
    - html/css
    - data structures and algorithms
@@ -454,19 +454,19 @@ TODO:
    - software fundamentals
 
 
-   - typescript
+   - socket.io
+   - rest api
+   - tailwind css
+ 
    - redux
    - express
    - postgressql
    - react js 16.8
-
-
-   - socket.io
-   - rest api
-   - tailwind css
+   - 
+   ✅ typescript
    ✅ team lead tech test
    ✅ team leadership test
-   ✅ english listening(question error)
+   ✅ English listening(question error)
    ✅ reading comprehension
    ✅ personality test
 
