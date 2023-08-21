@@ -107,18 +107,21 @@ A. Taking a hot bath and later massaging with palm kernel oil
 B. Going swimming
 C. Going dancing
 D. Drinking hot coffee while playing meditative sounds with early morning music while working
-E. Watching a really nice movie
-F. Wearing cut Gym clothes
+E. Watching a really nice movie with a friend
+F. Wearing cute Gym clothes
 G. Having a clean house
 H. Taking a long walk in the cool breese in the evening after that at night I sleep so soundly
 I. Going to pleasure park in the evening on wednesday to read love novels. I enjoy the breeze and the ambiance
+J. Sleeping in clean sheets. Especially freshly sun dried sheets
+K. Playing sports like volleyball
+L. 
 
 
  THINGS THAT I LIKE DOING AS A CHILD
 
 I liked doing this as a child and I am still a child at heart and I still like doing them
 A. acting 
-B. playing: square, gisting with my friends, making imaginary stories, watching movies and gushing about it with my frieds, 
+B. playing: square, gisting with my friends, making imaginary stories, watching movies and gushing about it with my friends, 
 C. reading
 D. teaching
 E. dancing
@@ -128,17 +131,17 @@ G.
 5. THINGS THAT I AM LOOKING FORWARD TO
 ............................................................
 
-A. Having a stable income. Making B.5million a month
-B. Looking hot and sexy and waring open back dress. And sexy gym clothes
+A. Having a stable income. Making 5million a month
+B. Looking hot and sexy and wearing an open back dress. And sexy gym clothes
 C. Having a tech institute. Or being a tech founder in other form like having a tech agency where I get jobs and outsource to developers
 D. Being surrounded by friends and love 
 E. Going to the US
 F. Reading love stories and novel
-G. becoming very dedicated and deciplined to my fitness
-H. Being happily married to a loving, caring, faithful man with. Added bonus half caste children
+G. becoming very dedicated and disciplined to my fitness
+H. Being happily married to a loving, caring, faithful man. Added bonus half-caste children
 I. Living out my purpose
-J. I would love to get a house and an investment and making passive income
-K. I would love to have a training center & reserch institute as my own contribution to the industry.
+J. I would love to get a house and an investment and make a passive income
+K. I would love to have a training centre & research institute as my own contribution to the industry.
 
 6. PAST THINGS THAT HAPPENED THAT I CAN NOT CHANGE
 ............................................................
@@ -210,7 +213,7 @@ So many lessons I have learnt on this wonderful adventure callled life. I would 
            During those moments you can feel lost and sad but I have learnt to find the lessons from those moments.
            For example a near death experiennce 
            teaches you the importance of life. A failure teaches you the need to be disciplined, committed, dilligent and hardworking. 
-           A lost oppurtunity open the path to an even better oppurtunity. Do not be too hung up on how things most be embrace the twists and turns of life with a view to fidning the silver linnning
+           A lost opportunity open the path to an even better oppurtunity. Do not be too hung up on how things most be embrace the twists and turns of life with a view to finding the silver lining
 
         b. I have learnt and am learning that part of the problem is taking life too seriously. Didn't get the 
            Job. So? Fauled the test, and then? Learn to laugh at your failures and mistakes. You are dying anyway. 
