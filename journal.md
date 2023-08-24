@@ -447,26 +447,27 @@ TODO:
 - Do one video in the course
 - complete turing profile
 
-- Take turing quiz for 6/19
-   - js
-   - html/css
+- Take Turing quiz for 6/19
    - data structures and algorithms
-
-   - git
    - bash/shell
    - software fundamentals
-
 
    - socket.io
    - rest api
    - tailwind css
  
-   - redux
+  
    - express
    - postgressql
    - react js 16.8
-   - 
+   - graphQL
+
+
    ✅ typescript
+   ✅ git
+   ✅ html/css
+   ✅ js
+   ✅ redux
    ✅ team lead tech test
    ✅ team leadership test
    ✅ English listening(question error)
@@ -474,7 +475,7 @@ TODO:
    ✅ personality test
 
 
-Todays application
+Today's application
 
 
 
@@ -519,9 +520,9 @@ Turing
 - Complete profile
 - Take quizes 
 
-andela
+Andela
 What if I get someone to help me take the test?
-are there other coding challenges after that life one
+Are there other coding challenges after that life one
 Are the jobs readily available now?
 
 Referrals
@@ -542,7 +543,7 @@ Referrals
 - Hope Andela
 - Daniel
 - that guy Jasmine always talks of: 
-- That girl that was your team lead
+- That girl who was your team lead
 - Kingsley
 - Ayo
 - That Andela guy that went to convenant 
@@ -567,7 +568,7 @@ B. Upskill
 - Typescript
 - build full stack application: (papa react)
 - Algorithms
-- React native
+- React Native
 
 Things to decide on:
 a. best way to review code
@@ -801,7 +802,7 @@ B.
 
 
 H. ACTING
-I just seat at home day in day out like one of the furnitures. 
+I just sit at home day in day out like one of the furnitures. 
 I am bored out of my mind. I like acting and want to be involved fun things. I would meet lots of people and go for events. I don't even know where to begin I guess I could find people to act as extras in their skits
 Actions 
 A. 
