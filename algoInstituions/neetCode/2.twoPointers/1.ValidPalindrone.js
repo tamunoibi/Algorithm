@@ -1,0 +1,1 @@
+// Same as PalindroneChecker.js in FCC folder
