@@ -23,6 +23,54 @@ function subsets(nums) {
       return;
     }
     // we add that item to the subset. Then run the 
+    /**POP AFTER RECURSIVE CALL
+     * It is an important point that the pop only happens AFTER
+     * the recursive call. 
+     * This means the call would keep right oooooooo untill when no more right moves
+     * then it would pop and keep right ooooooo untill when no more right moves
+     * This is the crust of what confuses me about this backtracking solution
+     * it is NOT
+     *         push
+     *         pop
+     *         repeat
+     *   
+     *   this means:
+     *         add to top of pile
+     *         remove from top of clothes pile by actually washing cloth
+     *         repeat
+     * 
+     * the above is how I think of if and as expected there is no connection btw them
+     * which is what I always felt. It felt like they are just fabricating the push and pop
+     * from their asses as the function gooes. There is no order nor reason to it.
+     * anyone the spirit lead you to do you do. But this is wrong. Now I have finally understood the
+     * order to it. Ah I should state the date when it became clear to me 04/oct/2023 at around 21:50
+     * 
+     * 
+     * The correct way  iS
+     *         push
+     *         repeat + safe pop 
+     *         pop
+     *   
+     *   to use a practical illustration means:
+     *         there are two bags of clothes with other bags of clothes inside them.  
+     *         
+     *         We have two bags but we must start from somewhere 
+     *         so we open the bag on our left side. 
+     *         we open the first bag of cloth we 
+     *         add all its clothes to the basket to  the top of the clothes basket of piled clothes to be washed, 
+     * 
+     *         Then we go back to the outer bag and check the right side of the clothes
+     *                                           1
+     *                                          /^
+     *                                        open
+     *            
+     *                        next:
+     *                                       1
+     *                                    /     \
+     *                                  open   open
+     *                     
+     * 
+     */
     subset.push(nums[i]);
     dfs(i + 1);
 
