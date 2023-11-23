@@ -1,3 +1,20 @@
+
+/**
+ * 
+ * In other to understand the solution you have to have worked on a similar 
+ * problem before, the questions are not intuitive. When you see someone working at the 
+ * solution very casually and explaining them like childs play you tend to gloss over 
+ * the years of hard work it took to get to that level of mastery. 
+ * That is why when starting out especially if you lack a maths background you must write out the solutions.
+ * Especially for things that like backtracking.
+ * There are cetain pillars that are just assumed you understand before the solution of backtracking
+ * is explained, How
+ * 1. double recursion work
+ * 2. the logic behind the constraints
+ * 3. ∏
+ *
+ *
+ */
 /**
  * Question
  * Given an integer array nums of unique elements, return all possible subsets
@@ -22,59 +39,11 @@ function subsets(nums) {
       res.push(subset.slice());
       return;
     }
-    // we add that item to the subset. Then run the 
-    /**POP AFTER RECURSIVE CALL
-     * It is an important point that the pop only happens AFTER
-     * the recursive call. 
-     * This means the call would keep right oooooooo untill when no more right moves
-     * then it would pop and keep right ooooooo untill when no more right moves
-     * This is the crust of what confuses me about this backtracking solution
-     * it is NOT
-     *         push
-     *         pop
-     *         repeat
-     *   
-     *   this means:
-     *         add to top of pile
-     *         remove from top of clothes pile by actually washing cloth
-     *         repeat
-     * 
-     * the above is how I think of if and as expected there is no connection btw them
-     * which is what I always felt. It felt like they are just fabricating the push and pop
-     * from their asses as the function gooes. There is no order nor reason to it.
-     * anyone the spirit lead you to do you do. But this is wrong. Now I have finally understood the
-     * order to it. Ah I should state the date when it became clear to me 04/oct/2023 at around 21:50
-     * 
-     * 
-     * The correct way  iS
-     *         push
-     *         repeat + safe pop 
-     *         pop
-     *   
-     *   to use a practical illustration means:
-     *         there are two bags of clothes with other bags of clothes inside them.  
-     *         
-     *         We have two bags but we must start from somewhere 
-     *         so we open the bag on our left side. 
-     *         we open the first bag of cloth we 
-     *         add all its clothes to the basket to  the top of the clothes basket of piled clothes to be washed, 
-     * 
-     *         Then we go back to the outer bag and check the right side of the clothes
-     *                                           1
-     *                                          /^
-     *                                        open
-     *            
-     *                        next:
-     *                                       1
-     *                                    /     \
-     *                                  open   open
-     *                     
-     * 
-     */
+   
     subset.push(nums[i]);
     dfs(i + 1);
 
-    // we remove that item from the subset
+    // we remove the last item from the subset
     subset.pop();
     dfs(i + 1);
   };
@@ -82,7 +51,28 @@ function subsets(nums) {
   dfs(0);
   return res;
 }
+// Does not work why??
 // O(2^N)
+function subsets(nums) {
+  const res = [];
+
+  const dfs = (arr, i) => {
+    if (i >= nums.length) {
+      res.push(arr);
+      return;
+    }
+   
+    arr.push(nums[i]);
+    dfs(arr, i + 1);
+
+    arr.pop();
+    dfs(arr, i + 1);
+  };
+
+  dfs([], 0);
+  return res;
+}
+// O(2^N) :pronounce as two of N squared
 function subsetsComment(nums) {
   // res is an empty array where we would push the answers to
   const res = [];
@@ -159,7 +149,61 @@ function subsetsComment(nums) {
       return;
     }
 
-    // decision to include nums[i]
+ // we add that item to the subset. Then run the 
+    /**POP AFTER RECURSIVE CALL
+     * It is an important point that the pop only happens AFTER
+     * the recursive call. 
+     * This means the call would keep right oooooooo untill when no more right moves
+     * then it would pop and keep right ooooooo untill when no more right moves
+     * This is the crust of what confuses me about this backtracking solution
+     * it is NOT
+     *         push
+     *         pop
+     *         repeat
+     *   
+     *   this means:
+     *         add to top of pile
+     *         remove from top of clothes pile by actually washing cloth
+     *         repeat
+     * 
+     * the above is how I think of if and as expected there is no connection btw them
+     * which is what I always felt. It felt like they are just fabricating the push and pop
+     * from their asses as the function gooes. There is no order nor reason to it.
+     * anyone the spirit lead you to do you do. But this is wrong. Now I have finally understood the
+     * order to it. Ah I should state the date when it became clear to me 04/oct/2023 at around 21:50
+     * 
+     * 
+     * The correct way  iS
+     *         push
+     *         repeat + safe pop 
+     *         pop
+     *   
+     *   to use a practical illustration means:
+     *         there are two bags of clothes with other bags of clothes inside them.  
+     *         
+     *         We have two bags but we must start from somewhere 
+     *         so we open the bag on our left side. 
+     *         we open the first bag of cloth we 
+     *         add all its clothes to the basket to  the top of the clothes basket of piled clothes to be washed, 
+     * 
+     *         Then we go back to the outer bag and check the right side of the clothes
+     *                                           1
+     *                                          /^
+     *                                        openBag
+     * 
+     * 
+     * 
+     * 
+     * 
+     * 
+     *            
+     *                        next:
+     *                                       1
+     *                                    /     \
+     *                                 opened   openBag
+     *                     
+     * 
+     */    // decision to include nums[i]
     /**
      * we are adding the current element
      * const nums = [2, 4]
@@ -178,6 +222,7 @@ function subsetsComment(nums) {
      * arr.pop()
      * console.log(subset); // []
      */
+    // we remove the last item from the subset
     subset.pop();
     dfs(i + 1);
   };

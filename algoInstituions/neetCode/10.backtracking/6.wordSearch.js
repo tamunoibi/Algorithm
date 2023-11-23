@@ -1,1 +1,1 @@
-function subsets(nums) {}
+function exist(board, word) {}

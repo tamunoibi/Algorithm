@@ -4,6 +4,9 @@
  *
  *  output: 
  *     [2, 3]
+ * The two numbers that sum to the target of 9 are 2 and 7.
+ * It returns the index of those two numbers. 
+ * that is index: 2 and 3
  */
 // --------------------------------------------------------------------------------------------------------------------
 //                               BRUTE FORCE

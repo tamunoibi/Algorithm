@@ -262,7 +262,7 @@ function twoSumTwoPointersExplanation(arr, target) {
  * 6.  Map Animations for explanations:  https://www.youtube.com/watch?v=pY6MPvVYvzg&ab_channel=CanukSpyder
  * 7. How to add logo to your video: https://www.youtube.com/watch?v=OJrd8YkttAE&ab_channel=BradleyTeaches
  * 8. Dynamic sidebar: https://www.youtube.com/watch?v=MkCekGHUuRA&ab_channel=BradleyTeaches
- * 8. link github: https://github.com/tamunoibi/Algorithm/blob/current/algoInstituions/neetCode/1.arraysAndHashing/3.twoSum.js
+ * 8. link github: https://github.com/tamunoibi/Algorithm/blob/current/algoInstituions/neetCode/1.arraysAndHashing/3.1.twoSum.js
  * 
  * 
  * Table of content
