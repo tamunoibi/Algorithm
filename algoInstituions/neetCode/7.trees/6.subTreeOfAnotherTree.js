@@ -67,16 +67,20 @@ function isSubtreeComment(root, subRoot) {
   // the left or the right of the main is same as the subroot
   return sameTree(root.left, subRoot) || sameTree(root.right, subRoot);
   /**
-   * The above line of code is just too need. The pattern dey bust my brain
+   * The above line of code is just too neat. The pattern dey bust my brain
    * so we are not just returning the result from a function call return  sameTree(root.left, subRoot)
-   * but we are returning Any value that returns True. Even to explain it is hard as this is the first time
+   * but we are returning Any value that returns True.
    * I am seeing this pattern It simplifies a very complicated logic.
+   * The logic is if either of the items return true return true. else return false
    * This is how  I would have approached it normally
    * if(sameTree(a) || sameTree(b)) {return true} else {false}
    *
    * But this neat way is
    * return sameTree(a) || sameTree(b)
    * too neat!
+   * if the fiirst part returns true it would return true
+   * if it is false it would move to thhe second sameTree call and return true if it 
+   * returns true or false otherwise
    *
    */
 }

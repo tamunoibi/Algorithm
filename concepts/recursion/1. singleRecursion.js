@@ -10,17 +10,18 @@
  */
 
 function callMyNameForever(name) {
-  callMyName();
+  callMyNameForever();
   console.log(name);
 }
-callMyName("Ib");
+
+callMyNameForever("Ib");
 
 function callMyNameProperly(name, i) {
   if (i == 5) {
     return;
   }
   i++;
-  callMyName(name, i);
+  callMyNameProperly(name, i);
   console.log(name, i);
 }
 

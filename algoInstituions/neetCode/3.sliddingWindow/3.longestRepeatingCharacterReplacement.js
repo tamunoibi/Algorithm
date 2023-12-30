@@ -1,3 +1,155 @@
+/**
+ *You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+ * Return the length of the longest substring containing the same letter you can get after performing the above operations.
+ * Example 1:
+ * Input: s = "ABAB", k = 2
+ * Output: 4
+ * Explanation: Replace the two 'A's with two 'B's or vice versa.
+ * 
+ * 
+ * Example 2:
+ * Input: s = "AABABBA", k = 1
+ * Output: 4
+ * Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
+ * The substring "BBBB" has the longest repeating letters, which is 4.
+ * There may exists other ways to achieve this answer too.
+ */
+function characterReplacement(s, k) {
+    const charCounts = {};
+    let longestLength = 1;
+    let start = 0;
+    
+    for (let end = 0; end < s.length; end += 1) {
+        if (!(s[end] in charCounts)) {
+            charCounts[s[end]] = 0;    
+        }
+        charCounts[s[end]] += 1;
+        
+        const maxFreq = Math.max(...Object.values(charCounts));
+        let windowLength = end-start+1;
+        const numReplacements = windowLength - maxFreq;
+        
+        if (numReplacements > k) {
+            charCounts[s[start]] -= 1;
+            start += 1;
+            windowLength -= 1;
+        }
+        
+        longestLength = Math.max(longestLength, windowLength);
+    }
+    
+    return longestLength;
+};
+function characterReplacementExplanation(s, k) {
+    const charCounts = {};
+    let longestLength = 1;
+    let start = 0;
+    
+    for (let end = 0; end < s.length; end += 1) {
+      /** What is end?
+       * end is a number
+       * end starts at 0
+       * 
+       * 
+       * What is s[end]?
+       * s[end] is one letter of a string
+       * Example:
+       * s = 'hi'
+       * end = [0]
+       * Ans:
+       * s[end] = s[0] = 'h'
+       * 
+       * 
+       * What is  charCounts?
+       * it is an object
+       * first it is an empty object: {}
+       * as the loop progresses it's key are the string and the values are the count
+       * example: s = 'l'
+       * charCounts = {l: 1}
+       * 
+       * 
+       * We check if each letter of the string, if there is no property name
+       * matching that letter the charCounts object we make its value 0;
+       * then increase it to 1
+       * example:
+       * charCounts ={}
+       * s = 'l'
+       * end = 0
+       * if(!'l'[0] in {}) = if(!('l' in {})) = if(!(false)) = if(true)
+       * l' in {} returns false
+       * the logical NOT operator is used to reverse the value from false to true  !false 
+       * and as such the if block runs and assigns the l value to 0
+       * {l: 0}
+       * 
+       * The part after the else also runs as it is not an if else. both run
+       * and the second part increases l: to 1
+       *  charCounts[s[end]] = 0;
+       * charCounts[s[0]] = 0
+       * charCounts.l = 0
+       * charCounts = {l: 0}
+       * 
+       *  
+       *  charCounts = {l: 0}
+       * 
+       *  charCounts[s[end]] = charCounts[s[end]] + 1 ;
+       * charCounts[s[0]] = charCounts[s[0]] + 1
+       * charCounts.l =  charCounts.l + 1 (because charCounts.l has a value of 0)
+       * charCounts.l =  0 + 1
+       * charCounts = {l: 1}
+       * 
+       */
+        if (!(s[end] in charCounts)) {
+            charCounts[s[end]] = 0;    
+        }
+        charCounts[s[end]] += 1;
+        /** An alternative way to write this:
+         *   const countsValue = charCounts[s[end]] || 0;
+         *   charCounts[s[end]] = 1 + countsValue;
+         */
+        // What is maxFrequency? 
+        // it is a number and it is for all the object values the number that appears the most
+        // example: charCounts = {a: 1, b: 5}
+        // maxFreq = Math.max(...Object.values(charCounts));
+        // maxFreq = Math.max(...[1, 5]);
+        // maxFreq = Math.max(1, 5);
+        // maxFreq =  5;
+        const maxFreq = Math.max(...Object.values(charCounts));
+        /**
+         *      ['a', 'b', 'c']
+         * index: 0    1    2
+         * 
+         * end - start = 2 - 0 = 2
+         * so the window lengthh would be two. that is index 1, 2
+         * but the length should be 3 because it is inclusive of index 0. that is index 0, 1, 2
+         * 
+         */
+        let windowLength = end-start+1;
+        /**Why are we removing the windowLength from thhe maxFrquency?
+         * 
+         */
+        const numReplacements = windowLength - maxFreq;
+        
+        /** Our constraint is k.
+         * if something i don't fully get is greater than k then we reduce our window lengthh
+         * example the total sum we are to get is k. say k is 7 if we have summed to 9 we must
+         * reduce our windowLengthh
+         * 
+         * 
+         * if we have exceded k we reduce the windowLength by doing some things
+         * 
+         */
+        if (numReplacements > k) {
+            charCounts[s[start]] -= 1;
+            start += 1;
+            windowLength -= 1;
+        }
+        
+        longestLength = Math.max(longestLength, windowLength);
+    }
+    
+    return longestLength;
+};
+
 // O(26N) which is O(N)
 function longestRepeatingCharacter(str) {
   const count = {};
@@ -43,7 +195,7 @@ function longestRepeatingCharacterTwo(str) {
 }
 // O(26N) which is O(N)
 function longestRepeatingCharacterExplanation(str) {
-  /** TIME COMPLEXITY In DETAIL EXPLAINING CONTANT TIMES 
+  /** TIME COMPLEXITY In DETAIL EXPLAINING CONSTANT TIMES 
    * Time Complexity:  O(26N)
    * O(26N) read as Big O of 26 times N
    * 26N = 26 * N

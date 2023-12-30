@@ -14,7 +14,7 @@ function maxUniqueNumbersComment(s) {
   return maxUniqueNumbers;
 }
 function maxUniqueNumbersComment(string) {
-  let left = 0; // left is the begininng of the window. The start.
+  let left = 0; // left is the begininng of the window. The start. We start on the first item of the array
   //   const right = 0; // right is the end of the window. We start it out at the first item.
   const characterSet = new Set();
   let maxUniqueNumbers = 0;

@@ -8,7 +8,7 @@
  * The only catch is it is a puzzle you must understand it step by step.
  * Any attempt to skip steps would make it complex.
  * the problem is most tutorials do not follow this logical step by step approach and as such complicates it.
- * That is why I break down this note into steps. If you are starting out read it in that step order
+ * That is why I break down this note into steps. If you are starting out read it in from note 0., 1. 2.... in that order don't skip notes
  * 
  * 
  * 1. The first is step to understand this is to understand Single recursion. 

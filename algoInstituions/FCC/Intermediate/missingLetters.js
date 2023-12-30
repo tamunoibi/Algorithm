@@ -11,16 +11,23 @@ function fearNotLetter(str) {
   }
 }
 function fearNotLetter(str) {
-  // We convert the letters to ASCII code  `'str'.charCodeAt(1);` returns 115
-  // Note the charCodeAt(index) takes the index of the character, not the character that we are trying to convert
-  // NOT charCodeAt('s') but charCodeAt(0)
-
-  // What is the logic of the solution?
-  // For consecutive letter like abc their ASCII code is also consecutive.
-  // a=97; b=98; and so on..
-  // so we would check if each letters ASCII code is consecutive. If it is not we would return that
-
-  // we get the ASCI code of the first character. if str = 'abce';  character 0 is 'a' and the ASCII code for 'a' is 97
+/**charCodeAt(<index>)
+ *  We convert the letters to ASCII code 
+ * ASCII stands for American Standard Code for Information Interchange. 
+ * charCodeAt() returns the ASCII code of the character at the specified index
+ * Example 1: 
+ *  `'str'.charCodeAt(1)` returns 116.
+ * Because index 1 is the letter 't' and its ASCII code is 116
+ * Note the charCodeAt(index) takes the index of the character, NOT the character that we are trying to convert
+ * it is charCodeAt(1) NOT charCodeAt('t')
+ * 
+ * What is the logic of the solution?
+ * For consecutive letter like abc their ASCII code is also consecutive.
+ * a=97; b=98; and so on..
+ * 
+ * so we would check if each letters ASCII code is consecutive. If it is not we would return that
+ * we get the ASCI code of the first character. if str = 'abce';  character 0 is 'a' and the ASCII code for 'a' is 97
+ */
   const start = str.charCodeAt(0);
 
   // we get the ASCI code of the last character.if str = 'abce';  character 3 is 'e' and the ASCII code for 'e' is 101.

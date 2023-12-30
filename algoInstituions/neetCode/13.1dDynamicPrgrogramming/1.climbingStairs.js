@@ -12,7 +12,7 @@ function climbingStairsMySolution(n) {
   }
   return two;
 }
-// the way it was thought
+// the way it was thought of the problem
 function climbingStairs(n) {
   let [one, two] = [1, 1];
   for (let index = 2; index < n; index++) {

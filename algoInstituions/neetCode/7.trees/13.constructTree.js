@@ -27,7 +27,7 @@ function buildTreeComment(preorder, inorder) {
 
 
   // The items on the left side are the items of the inorder are the 
-  root.left = buildTree(preorder.slice(1, mid+1), inorder.slice(0, mid+1));
+  root.left  = buildTree(preorder.slice(1, mid+1), inorder.slice(0, mid+1));
   root.right = buildTree(preorder.slice(), inorder.slice(1, mid+1));
   return root;
 }

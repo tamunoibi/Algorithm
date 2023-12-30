@@ -19,7 +19,7 @@ function maximumPath(root) {
     }
     let leftMax = dfs(root.left);
     let rightMax = dfs(root.right);
-    leftMax = Math.max(leftMax, 0);
+    leftMax  = Math.max(leftMax, 0);
     rightMax = Math.max(rightMax, 0);
 
     res[0] = Math.max(res[0] + root.val + leftMax + rightMax);

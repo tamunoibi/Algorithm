@@ -10,12 +10,41 @@
 7. Triangle practice(https://leetcode.com/problems/triangle/)
 7. Know if a string is one edit away (microsoft)
 8. permutations forming 
-9. 
-10. 
 
-Topics:
-1. binary tree
-2. dynamic programming
-3. 2pointer
-4. Geometry
-5.
+Topics in algorithm:
+- binary tree
+- dynamic programming
+- backtracking
+- Geometry
+- 2pointer
+
+### To write in binary tree note
+4 balanced height of bt      82  long note
+10 good nodes of of BT       38
+12 kth smallest element      37
+13 construct bt                  Jounal/Rough 
+14 BT maximum path sum       35
+15 Serialize and deserialize 32
+
+### To write in medium article from campus note
+Note 1
+ - multiples 35 
+Note 2
+ - definition of terms: anagram  70 
+Note 3
+ - area of squares     21
+ - area of rectangle   22
+ - circle anatomy      50
+ - area of circle      51
+ - perfom swaps         8
+ - dfs                 28
+ - bfs
+ - palindrom & anagram 63
+Note 4
+ - subsequence, subarray, subset 14
+ - valid subsequence   58
+ - permutation & combinatioon 11
+Note 5
+- check for empty object 28
+- array is empty 28
+- pictorial representation of bfs 28

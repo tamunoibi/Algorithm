@@ -1,10 +1,11 @@
 // binary tree visualiser. To help create trees: https://binary-tree-builder.netlify.app/
-
+// types of binary tree: full, perfect, complete, degenerate, balanced: https://www.prepbytes.com/blog/tree/array-representation-of-binary-tree/#:~:text=Explanation%20of%20Array%20Representation%20of,in%20a%20breadth%2Dfirst%20search.
+// x
 /**
  * What is a Binary Tree?
  * A binary tree  is simply an object with  at most 3 properties: val, left and right.
 the part that gets confusing is that left can also have properties(val, left and right). And right can also have properties(val, left and right).
-
+ 
 Each note has at most 2 children
  * Example this tree node a has two children b and c. B has two children while c has one child
       a

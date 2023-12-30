@@ -11,7 +11,7 @@ function goodNodes(root) {
     maxVal = Math.max(node.val, maxVal);
 
     res += dfs(root.left, maxVal);
-    res += dfs(root.right, maxVal);
+    res += dfs(rootx.right, maxVal);
     return res;
   };
     return dfs(root, root.val);

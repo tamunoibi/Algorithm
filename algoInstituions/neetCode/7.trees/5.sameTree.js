@@ -30,10 +30,10 @@ const q = {
 
 const sameTree = (p, q) => {
   /**
-   * 1. add  node
-   * 2. remove first element with shift
-   * 3. add the left and right children
-   * 4. repeat
+   * 1. add root node to queue
+   * 2. remove first element from the queue with shift
+   * 3. add the left and right children if they exits
+   * 4. repeat steps 2 and 3 while the queue is not empty
    */
 
   const pQueue = [p];
@@ -66,10 +66,12 @@ const sameTree = (p, q) => {
 };
 function sameTree(p, q) {
   // when both trees are empty
-  // example: null = null
+  // example: p = null; q = null;
 
   // if one of them is empty but the other is not empty
-  //  example: {val: a} != null
+  //  example: 
+  // p = {val: 'a' left: null; right: null  };
+  // q = null;
   if ((p && !q) || (!p && q)) {
     return false;
   }
@@ -139,12 +141,13 @@ const sameTreeTwoComment = (p, q) => {
       return dfs(p.left, q.left) & dfs(p.right, q.right);
     }
   };
-  /**Wrong way
+  /**Wrong way: call dfs and return true either way irrespective of what was returned from the function call
    * dfs(p, q);
    * return true 
    * 
-   * Correct way
+   * Correct way: returning the result from the function call dfs ()
    * return dfs(p, q);
+   *
   */
  
   return dfs(p, q);

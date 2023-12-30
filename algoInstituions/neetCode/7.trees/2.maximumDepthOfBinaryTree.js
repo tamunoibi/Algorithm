@@ -39,9 +39,9 @@ function maximumDepthBinaryTreeRecursionComment(root) {
   if (!root) {
     return 0;
   }
-  const left = maxDepth(root.left);
-  const right = maxDepth(root.right);
-  //the maximum depth 1 + either the left or the right maximum.
+  const left = maximumDepthBinaryTreeRecursionComment(root.left);
+  const right = maximumDepthBinaryTreeRecursionComment(root.right);
+  //the maximum depth 1 + the maximum between the left and the right.
   return 1 + Math.max(left, right);
 }
 function maximumDepthBinaryTreeRecursion2comment(root) {
@@ -51,20 +51,52 @@ function maximumDepthBinaryTreeRecursion2comment(root) {
   }
   let max = 0;
 
-  const left = 1 + maxDepth(root.left);
-  const right = 1 + maxDepth(root.right);
+  //left is 1 + the value from calling recursion on the left
+  const left = 1 + maximumDepthBinaryTreeRecursion2comment(root.left);
+  //left is 1 + the value from calling recursion on the right
+  const right = 1 + maximumDepthBinaryTreeRecursion2comment(root.right);
 
-  //the maximum depth 1 + either the left or the right maximum.
+  //update the max to be the maximum between the left and the right.
   max = Math.max(left, right);
   // return the maximum depth
   return max;
 }
 function maxDepthQueueBfs(root) {
+  let level = 0;
+  if (!root) {
+    return level;
+  }
+  const queue = [root];
+  // does not work for some scenrios: 
+  // example: [0,2,4,1,null,3,-1,5,1,null,6,null,8]
+
+  // The part that is unclear is how this while and for loop work together
+  // why does the .length property of the for loop NOT change
+// while the .length of the while loop changes to the updated array length
+// haven checked it they both change.
+// the reason thhe for loop stops is that i is increasing so it is comparing 1 < 1
+// and this is false 
+// where as the while loop runs as long as the array is not empty 
+  while (queue.length) {
+    for (let index = 0; index < queue.length; index++) {
+      const curr = queue.shift();
+      if (curr.left) {
+        queue.push(curr.left);
+      }
+      if (curr.right) {
+        queue.push(curr.right);
+      }
+    }
+    level++;
+  }
+  return level;
+}
+function maxDepthQueueBfsComment(root) {
   /**
    * Breadth first search
-   * 1. add the first item to the queue
-   * 2. remove the first item using shift
-   * 3. add its children if they exits.
+   * 1. add the root to the queue
+   * 2. remove the first item from the queue using shift
+   * 3. add its left and right child if they exits.
    */
   let level = 0;
   if (!root) {
@@ -115,6 +147,7 @@ function maxDepthStackDfs(root) {
   }
   return level;
 }
+
 // Check if this works now: I made a change
 function maxDepthStackDfsExperiment(root) {
   if (!root) {
