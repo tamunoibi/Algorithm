@@ -174,6 +174,7 @@ function minWindowComment(s, t) {
   // when we return our final answer we check if it has changed from the samllest possible number. If it has not changed that means no new answer was found and we return an empty string
   // Question: could we not have set it initially to zero instead of negative infinity
   let resLen = Math.NEGATIVE_INFINITY;
+  // I doubt there is anything like Math.NEGATIVE_INFINITY it is  NUMBER.NEGATIVE_INFINITY
   //l is the left pointer. That is the left boundary of the window. It initially starts from 0 that is the first item in the string
   let l = 0;
 

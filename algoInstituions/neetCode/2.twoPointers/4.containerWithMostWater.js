@@ -202,6 +202,15 @@ function maxAreaTwoPointer(height) {
 
 function maxAreaTwoPointerAgain(height) {
     let max = Number.MIN_VALUE;
+    /**
+     * Number.MIN_VALUE is the smallest positive number.
+     * note it is not the smallest Posible number 
+     * as it is even greater than 0; console.log( Number.MIN_VALUE > 0); // returns true
+     * console.log( Number.MIN_VALUE > -2); // returns true
+     * A common error is that you try to use this as the smallest 
+     * possible number and this doesn't work as it is not the smallest possible number.
+     * 
+     */
     let left = 0;
     let right = height.length -1;
     while(left < right) {
